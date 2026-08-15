@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : area
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Sat Aug 15 22:44:25 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed90nm_max_hvt (File: /home/ICer/Downloads/Lib/synopsys/models/saed90nm_max_hvt.db)
+
+Number of ports:                          188
+Number of nets:                          1164
+Number of cells:                          948
+Number of combinational cells:            786
+Number of sequential cells:               158
+Number of macros/black boxes:               0
+Number of buf/inv:                        345
+Number of references:                      28
+
+Combinational area:               7154.380855
+Buf/Inv area:                     2980.454442
+Noncombinational area:            4871.577677
+Macro/Black Box area:                0.000000
+Net Interconnect area:             531.838014
+
+Total cell area:                 12025.958531
+Total area:                      12557.796545
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area           Local cell area
+                                  -------------------  ---------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-     Noncombi-  Black-
+                                  Total       Total    national   national   boxes   Design
+--------------------------------  ----------  -------  ---------  ---------  ------  ------------------------------
+i2c_master_top                    12025.9585    100.0  2150.0928  1677.3120  0.0000  i2c_master_top
+byte_controller                    8198.5537     68.2  1209.1392   815.6160  0.0000  i2c_master_byte_ctrl
+byte_controller/bit_controller     6173.7985     51.3  2735.3088  2378.6496  0.0000  i2c_master_bit_ctrl
+byte_controller/bit_controller/sub_228
+                                    587.9808      4.9   587.9808     0.0000  0.0000  i2c_master_bit_ctrl_DW01_dec_1
+byte_controller/bit_controller/sub_260
+                                    471.8592      3.9   471.8592     0.0000  0.0000  i2c_master_bit_ctrl_DW01_dec_0
+--------------------------------  ----------  -------  ---------  ---------  ------  ------------------------------
+Total                                                  7154.3809  4871.5777  0.0000
+
+1

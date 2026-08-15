@@ -1,0 +1,57 @@
+Loading db file '/home/ICer/Downloads/Lib/synopsys/models/saed90nm_max_hvt.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Sat Aug 15 22:44:26 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_max_hvt (File: /home/ICer/Downloads/Lib/synopsys/models/saed90nm_max_hvt.db)
+
+
+Operating Conditions: WORST   Library: saed90nm_max_hvt
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+i2c_master_top         16000             saed90nm_max_hvt
+i2c_master_byte_ctrl   16000             saed90nm_max_hvt
+i2c_master_bit_ctrl    8000              saed90nm_max_hvt
+i2c_master_bit_ctrl_DW01_dec_0
+                       8000              saed90nm_max_hvt
+i2c_master_bit_ctrl_DW01_dec_1
+                       8000              saed90nm_max_hvt
+
+
+Global Operating Voltage = 0.7  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+i2c_master_top                           13.098   18.048 5.31e+07   84.257 100.0
+  byte_controller (i2c_master_byte_ctrl)
+                                          3.289   12.882 3.96e+07   55.743  66.2
+    bit_controller (i2c_master_bit_ctrl)
+                                          2.679    9.196 2.91e+07   41.004  48.7
+      sub_228 (i2c_master_bit_ctrl_DW01_dec_1)
+                                          0.515    1.785 3.12e+05    2.612   3.1
+      sub_260 (i2c_master_bit_ctrl_DW01_dec_0)
+                                       2.17e-03 8.47e-03 2.69e+05    0.279   0.3
+1

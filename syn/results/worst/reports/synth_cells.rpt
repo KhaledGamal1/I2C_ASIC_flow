@@ -1,0 +1,592 @@
+ 
+****************************************
+Report : cell
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Sat Aug 15 22:44:25 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    d - dont_touch
+    h - hierarchical
+    n - noncombinational
+    r - removable
+   so - sizing only
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+B_8                       NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  d
+B_9                       NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  d
+C456                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+C457                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+C477                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+C504                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+C506                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+C511                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+C512                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+C515                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+C516                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+C517                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+C520                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+I_0                       INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+I_1                       INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U4                        AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U5                        AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U6                        AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U7                        AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U8                        AO21X1_HVT      saed90nm_max_hvt
+                                                          10.137600 
+U9                        AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U10                       AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U11                       AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U12                       AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U13                       OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+U14                       AO21X1_HVT      saed90nm_max_hvt
+                                                          10.137600 
+U15                       NOR2X0_HVT      saed90nm_max_hvt
+                                                          5.529600  
+U18                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U21                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U22                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U23                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U24                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U25                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U26                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U27                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U28                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U31                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U32                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U33                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U37                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U38                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U39                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U40                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U41                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U42                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U43                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U44                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U45                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U46                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U47                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U48                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U49                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U50                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U51                       NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U54                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  d
+U63                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U64                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U65                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U66                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U67                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U68                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U69                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U70                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U72                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U76                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U79                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U80                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U81                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U82                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U83                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U84                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U85                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U86                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U87                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U88                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U89                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U90                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U91                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U92                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U93                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U94                       MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U95                       NAND2X1_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U96                       NAND2X1_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U97                       AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U98                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U99                       INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U100                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U101                      NAND2X1_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U102                      NAND2X1_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U103                      OR3X2_HVT       saed90nm_max_hvt
+                                                          11.059200 
+U104                      NAND2X1_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U105                      OR3X2_HVT       saed90nm_max_hvt
+                                                          11.059200 
+U106                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U107                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U108                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U109                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U110                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U111                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U112                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U113                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U114                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U115                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U116                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U117                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U118                      INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U119                      INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U120                      INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U121                      NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U122                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U123                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U124                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U125                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U126                      NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U127                      NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U128                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U129                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U130                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U131                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U132                      INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U133                      IBUFFX8_HVT     saed90nm_max_hvt
+                                                          18.431999 
+U134                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U135                      INVX4_HVT       saed90nm_max_hvt
+                                                          9.216000  
+U136                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U137                      INVX4_HVT       saed90nm_max_hvt
+                                                          9.216000  
+U138                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U139                      INVX4_HVT       saed90nm_max_hvt
+                                                          9.216000  
+U140                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U141                      INVX4_HVT       saed90nm_max_hvt
+                                                          9.216000  
+U142                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U143                      INVX4_HVT       saed90nm_max_hvt
+                                                          9.216000  
+U144                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U145                      INVX4_HVT       saed90nm_max_hvt
+                                                          9.216000  
+U146                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U147                      INVX4_HVT       saed90nm_max_hvt
+                                                          9.216000  
+U148                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U149                      INVX4_HVT       saed90nm_max_hvt
+                                                          9.216000  
+U151                      INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U152                      IBUFFX8_HVT     saed90nm_max_hvt
+                                                          18.431999 
+U153                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U154                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U155                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U156                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U157                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U158                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U159                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U160                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U161                      INVX2_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U162                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U163                      INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U164                      NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U165                      NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U166                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U167                      NAND2X0_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U168                      AND2X4_HVT      saed90nm_max_hvt
+                                                          11.059200 
+U169                      NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U170                      NOR3X0_HVT      saed90nm_max_hvt
+                                                          8.294400  
+U171                      INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U172                      INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U173                      INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U174                      OR2X4_HVT       saed90nm_max_hvt
+                                                          11.980800 
+U175                      MUX21X2_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U176                      NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U177                      NOR3X0_HVT      saed90nm_max_hvt
+                                                          8.294400  
+U178                      AND2X2_HVT      saed90nm_max_hvt
+                                                          8.294400  
+U179                      NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U180                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U181                      INVX0_HVT       saed90nm_max_hvt
+                                                          5.529600  
+U182                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U183                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U184                      NOR2X0_HVT      saed90nm_max_hvt
+                                                          5.529600  
+U185                      NOR2X0_HVT      saed90nm_max_hvt
+                                                          5.529600  
+U186                      INVX32_HVT      saed90nm_max_hvt
+                                                          47.001598 d
+U187                      NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U188                      NBUFFX2_HVT     saed90nm_max_hvt
+                                                          5.529600  
+U190                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+U191                      INVX32_HVT      saed90nm_max_hvt
+                                                          47.001598 d
+U192                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+U193                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+U194                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+U195                      INVX32_HVT      saed90nm_max_hvt
+                                                          47.001598 d
+U196                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+U197                      OR2X1_HVT       saed90nm_max_hvt
+                                                          7.372800  
+U198                      XOR2X1_HVT      saed90nm_max_hvt
+                                                          13.824000 
+U199                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U200                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U201                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U202                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U203                      MUX41X1_HVT     saed90nm_max_hvt
+                                                          23.040001 
+U204                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U205                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U206                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U207                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U208                      MUX41X1_HVT     saed90nm_max_hvt
+                                                          23.040001 
+U209                      MUX41X1_HVT     saed90nm_max_hvt
+                                                          23.040001 
+U210                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U211                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U212                      MUX41X1_HVT     saed90nm_max_hvt
+                                                          23.040001 
+U213                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U214                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U215                      MUX41X1_HVT     saed90nm_max_hvt
+                                                          23.040001 
+U216                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U217                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U218                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U219                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U220                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U221                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U222                      MUX41X1_HVT     saed90nm_max_hvt
+                                                          23.040001 
+U223                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U224                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U225                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U226                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U227                      MUX41X1_HVT     saed90nm_max_hvt
+                                                          23.040001 
+U228                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U229                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U230                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U231                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U232                      MUX41X1_HVT     saed90nm_max_hvt
+                                                          23.040001 
+U233                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U234                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U235                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  
+U236                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U237                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 
+U238                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 so
+U239                      MUX21X1_HVT     saed90nm_max_hvt
+                                                          11.059200 so
+U240                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U241                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U242                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U243                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U244                      AND2X1_HVT      saed90nm_max_hvt
+                                                          7.372800  
+U245                      INVX1_HVT       saed90nm_max_hvt
+                                                          6.451200  d
+al_reg                    DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+byte_controller           i2c_master_byte_ctrl            8198.553693
+                                                                    h, n
+cr_reg[0]                 DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+cr_reg[1]                 DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+cr_reg[2]                 DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+cr_reg[3]                 DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+cr_reg[4]                 DFFARX2_HVT     saed90nm_max_hvt
+                                                          34.099201 n
+cr_reg[5]                 DFFARX2_HVT     saed90nm_max_hvt
+                                                          34.099201 n
+cr_reg[6]                 DFFARX2_HVT     saed90nm_max_hvt
+                                                          34.099201 n
+cr_reg[7]                 DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+ctr_reg[0]                DFFARX2_HVT     saed90nm_max_hvt
+                                                          34.099201 n
+ctr_reg[1]                DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+ctr_reg[2]                DFFARX2_HVT     saed90nm_max_hvt
+                                                          34.099201 n
+ctr_reg[3]                DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+ctr_reg[4]                DFFARX2_HVT     saed90nm_max_hvt
+                                                          34.099201 n
+ctr_reg[5]                DFFARX2_HVT     saed90nm_max_hvt
+                                                          34.099201 n
+ctr_reg[6]                DFFARX2_HVT     saed90nm_max_hvt
+                                                          34.099201 n
+ctr_reg[7]                DFFARX2_HVT     saed90nm_max_hvt
+                                                          34.099201 n
+irq_flag_reg              DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+prer_reg[0]               DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[1]               DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[2]               DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[3]               DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[4]               DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[5]               DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[6]               DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[7]               DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[8]               DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[9]               DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[10]              DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[11]              DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[12]              DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[13]              DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[14]              DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+prer_reg[15]              DFFASX1_HVT     saed90nm_max_hvt
+                                                          31.334400 n
+rxack_reg                 DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+tip_reg                   DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+txr_reg[0]                DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+txr_reg[1]                DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+txr_reg[2]                DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+txr_reg[3]                DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+txr_reg[4]                DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+txr_reg[5]                DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+txr_reg[6]                DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+txr_reg[7]                DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+wb_ack_o_reg              DFFX1_HVT       saed90nm_max_hvt
+                                                          24.883200 n
+wb_dat_o_reg[0]           DFFX1_HVT       saed90nm_max_hvt
+                                                          24.883200 n
+wb_dat_o_reg[1]           DFFX1_HVT       saed90nm_max_hvt
+                                                          24.883200 n
+wb_dat_o_reg[2]           DFFX1_HVT       saed90nm_max_hvt
+                                                          24.883200 n
+wb_dat_o_reg[3]           DFFX1_HVT       saed90nm_max_hvt
+                                                          24.883200 n
+wb_dat_o_reg[4]           DFFX1_HVT       saed90nm_max_hvt
+                                                          24.883200 n
+wb_dat_o_reg[5]           DFFX1_HVT       saed90nm_max_hvt
+                                                          24.883200 n
+wb_dat_o_reg[6]           DFFX1_HVT       saed90nm_max_hvt
+                                                          24.883200 n
+wb_dat_o_reg[7]           DFFX1_HVT       saed90nm_max_hvt
+                                                          24.883200 n
+wb_inta_o_reg             DFFARX1_HVT     saed90nm_max_hvt
+                                                          32.256001 n
+--------------------------------------------------------------------------------
+Total 285 cells                                           12025.958531
+1
