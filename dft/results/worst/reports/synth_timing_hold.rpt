@@ -6,22 +6,29 @@ Report : timing
         -max_paths 2
 Design : i2c_master_top
 Version: O-2018.06-SP1
-Date   : Mon Aug 17 20:37:45 2026
+Date   : Tue Aug 18 02:08:07 2026
 ****************************************
 
 Operating Conditions: WORST   Library: saed90nm_max_hvt
 Wire Load Model Mode: enclosed
 
-  Startpoint: Scan_Data_Out (internal pin)
+  Startpoint: wb_inta_o_reg
+              (rising edge-triggered flip-flop)
   Endpoint: Scan_Data_Out
             (output port)
   Path Group: (none)
   Path Type: min
 
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     16000                 saed90nm_max_hvt
+
   Point                                    Incr       Path
   -----------------------------------------------------------
-  Scan_Data_Out (out)                      0.00       0.00 r
-  data arrival time                                   0.00
+  wb_inta_o_reg/CLK (SDFFARX1_HVT)         0.00       0.00 r
+  wb_inta_o_reg/Q (SDFFARX1_HVT)           1.60       1.60 r
+  Scan_Data_Out (out)                      0.07       1.67 r
+  data arrival time                                   1.67
   -----------------------------------------------------------
   (Path is unconstrained)
 
@@ -40,11 +47,11 @@ Wire Load Model Mode: enclosed
   Point                                    Incr       Path
   -----------------------------------------------------------
   wb_dat_o_reg_6_/CLK (SDFFX1_HVT)         0.00       0.00 r
-  wb_dat_o_reg_6_/Q (SDFFX1_HVT)           1.34       1.34 r
-  U217/ZN (INVX1_HVT)                      0.30       1.64 f
-  U218/ZN (INVX4_HVT)                      0.54       2.18 r
-  wb_dat_o[6] (out)                        2.13       4.31 r
-  data arrival time                                   4.31
+  wb_dat_o_reg_6_/Q (SDFFX1_HVT)           1.31       1.31 r
+  U217/ZN (INVX1_HVT)                      0.46       1.77 f
+  U218/ZN (INVX4_HVT)                      0.54       2.31 r
+  wb_dat_o[6] (out)                        2.13       4.44 r
+  data arrival time                                   4.44
   -----------------------------------------------------------
   (Path is unconstrained)
 

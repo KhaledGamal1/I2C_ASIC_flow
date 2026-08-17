@@ -4,7 +4,7 @@ Report : net fanout
         -threshold 50
 Design : i2c_master_top
 Version: O-2018.06-SP1
-Date   : Mon Aug 17 20:37:48 2026
+Date   : Tue Aug 18 02:08:10 2026
 ****************************************
 
 
@@ -14,8 +14,10 @@ Wire Load Model Mode: enclosed
 Design        Wire Load Model            Library
 ------------------------------------------------
 i2c_master_top         16000             saed90nm_max_hvt
-i2c_master_byte_ctrl   16000             saed90nm_max_hvt
-i2c_master_bit_ctrl    8000              saed90nm_max_hvt
+i2c_master_byte_ctrl_test_1
+                       16000             saed90nm_max_hvt
+i2c_master_bit_ctrl_test_1
+                       8000              saed90nm_max_hvt
 i2c_master_bit_ctrl_DW01_dec_0
                        8000              saed90nm_max_hvt
 i2c_master_bit_ctrl_DW01_dec_1
@@ -34,5 +36,7 @@ Attributes:
 
 Net                 Fanout   Attributes   Capacitance   Driver
 --------------------------------------------------------------------------------
-n331                    53                   56.89      U339/ZN
+n398                    55                   76.12      U408/ZN
+byte_controller/bit_controller/n570
+                        74                   76.30      byte_controller/bit_controller/U521/ZN
 1

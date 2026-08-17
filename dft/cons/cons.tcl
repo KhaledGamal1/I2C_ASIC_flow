@@ -16,21 +16,21 @@ set_scan_configuration -style multiplexed_flip_flop 	\
 create_port -direction in Scan_Data_In
 create_port -direction out Scan_Data_Out
 create_port -direction in Scan_En
-create_port -direction in scan_clk
-create_port -direction in scan_reset
+#create_port -direction in scan_clk
+#create_port -direction in scan_reset
 
 set_ideal_network [get_ports Scan_En]
-set_ideal_network [get_ports scan_clk]
-set_ideal_network [get_ports scan_reset]
+set_ideal_network [get_ports dft_clk_i]
+set_ideal_network [get_ports dft_rst_i]
 
 set_case_analysis 1 [get_ports test_mode]
 
 # Clock Signal
-set_dft_signal -port [get_ports scan_clk] 	-type ScanClock 	-view spec 	-timing {45 55}
+set_dft_signal -port [get_ports dft_clk_i] 	-type ScanClock 	-view existing_dft 	-timing {45 55}
 
 
 # Reset signal
-set_dft_signal -port [get_ports scan_reset] 	-type Reset 	-view spec 	-active 0
+set_dft_signal -port [get_ports dft_rst_i] 	-type Reset 	-view existing_dft 	-active 0
 
 
 # Test Mode signal 

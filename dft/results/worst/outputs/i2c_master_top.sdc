@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Mon Aug 17 20:37:49 2026
+# Created by write_sdc on Tue Aug 18 02:08:12 2026
 
 ###################################################################
 set sdc_version 2.1
@@ -53,8 +53,6 @@ set_ideal_network [get_ports wb_rst_i]
 set_ideal_network [get_ports dft_clk_i]
 set_ideal_network [get_ports dft_rst_i]
 set_ideal_network [get_ports Scan_En]
-set_ideal_network [get_ports scan_clk]
-set_ideal_network [get_ports scan_reset]
 create_clock [get_ports wb_clk_i]  -period 8  -waveform {0 4}
 set_output_delay -clock wb_clk_i  -max 1.6  [get_ports {wb_dat_o[7]}]
 set_output_delay -clock wb_clk_i  -max 1.6  [get_ports {wb_dat_o[6]}]

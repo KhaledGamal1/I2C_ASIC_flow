@@ -3,7 +3,7 @@
 Report : DFT signals
 Design : i2c_master_top
 Version: O-2018.06-SP1
-Date   : Mon Aug 17 20:37:46 2026
+Date   : Tue Aug 18 02:08:08 2026
 ****************************************
 
 ========================================
@@ -13,6 +13,9 @@ VIEW     : Existing DFT
 Port               SignalType          Active    Hookup    Timing    Usage
 ----------         ----------          ------    ------    ------    -----
 test_mode          Constant            1         -
+dft_clk_i          ScanMasterClock     1         -         P 100.0 R 45.0 F 55.0
+dft_clk_i          MasterClock         1         -         P 100.0 R 45.0 F 55.0
+dft_rst_i          Reset               0         -         P 100.0 R 55.0 F 45.0
 ========================================
 TEST MODE: all_dft_protocol
 VIEW     : Existing DFT
@@ -20,6 +23,9 @@ VIEW     : Existing DFT
 Port               SignalType          Active    Hookup    Timing    Usage
 ----------         ----------          ------    ------    ------    -----
 test_mode          Constant            1         -
+dft_clk_i          ScanMasterClock     1         -         P 100.0 R 45.0 F 55.0
+dft_clk_i          MasterClock         1         -         P 100.0 R 45.0 F 55.0
+dft_rst_i          Reset               0         -         P 100.0 R 55.0 F 45.0
 ========================================
 TEST MODE: all_dft
 VIEW     : Existing DFT
@@ -27,7 +33,77 @@ VIEW     : Existing DFT
 Port               SignalType          Active    Hookup    Timing    Usage
 ----------         ----------          ------    ------    ------    -----
 test_mode          Constant            1         -
+dft_clk_i          ScanMasterClock     1         -         P 100.0 R 45.0 F 55.0
+dft_clk_i          MasterClock         1         -         P 100.0 R 45.0 F 55.0
+dft_rst_i          Reset               0         -         P 100.0 R 55.0 F 45.0
+========================================
+TEST MODE: Internal_scan_user
+VIEW     : Existing DFT
+========================================
+Port               SignalType          Active    Hookup    Timing    Usage
+----------         ----------          ------    ------    ------    -----
+test_mode          Constant            1         -
+dft_clk_i          ScanMasterClock     1         -         P 100.0 R 45.0 F 55.0
+dft_clk_i          MasterClock         1         -         P 100.0 R 45.0 F 55.0
+dft_rst_i          Reset               0         -         P 100.0 R 55.0 F 45.0
+========================================
+TEST MODE: Internal_scan_protocol
+VIEW     : Existing DFT
+========================================
+Port               SignalType          Active    Hookup    Timing    Usage
+----------         ----------          ------    ------    ------    -----
+test_mode          Constant            1         -
+dft_clk_i          ScanMasterClock     1         -         P 100.0 R 45.0 F 55.0
+dft_clk_i          MasterClock         1         -         P 100.0 R 45.0 F 55.0
+dft_rst_i          Reset               0         -         P 100.0 R 55.0 F 45.0
+========================================
+TEST MODE: Internal_scan
+VIEW     : Existing DFT
+========================================
+Port               SignalType          Active    Hookup    Timing    Usage
+----------         ----------          ------    ------    ------    -----
+test_mode          Constant            1         -
+dft_clk_i          ScanMasterClock     1         -         P 100.0 R 45.0 F 55.0
+dft_clk_i          MasterClock         1         -         P 100.0 R 45.0 F 55.0
+dft_rst_i          Reset               0         -         P 100.0 R 55.0 F 45.0
 sda_pad_o          Constant            -         -
 scl_pad_o          Constant            -         -
+Scan_Data_Out      ScanDataOut         -         -
+Scan_Data_In       ScanDataIn          -         -
+Scan_En            ScanEnable          1         -
+========================================
+TEST MODE: Mission_mode_user
+VIEW     : Existing DFT
+========================================
+Port               SignalType          Active    Hookup    Timing    Usage
+----------         ----------          ------    ------    ------    -----
+test_mode          Constant            1         -
+dft_clk_i          ScanMasterClock     1         -         P 100.0 R 45.0 F 55.0
+dft_clk_i          MasterClock         1         -         P 100.0 R 45.0 F 55.0
+dft_rst_i          Reset               0         -         P 100.0 R 55.0 F 45.0
+========================================
+TEST MODE: Mission_mode_protocol
+VIEW     : Existing DFT
+========================================
+Port               SignalType          Active    Hookup    Timing    Usage
+----------         ----------          ------    ------    ------    -----
+test_mode          Constant            1         -
+dft_clk_i          ScanMasterClock     1         -         P 100.0 R 45.0 F 55.0
+dft_clk_i          MasterClock         1         -         P 100.0 R 45.0 F 55.0
+dft_rst_i          Reset               0         -         P 100.0 R 55.0 F 45.0
+========================================
+TEST MODE: Mission_mode
+VIEW     : Existing DFT
+========================================
+Port               SignalType          Active    Hookup    Timing    Usage
+----------         ----------          ------    ------    ------    -----
+test_mode          Constant            1         -
+dft_clk_i          ScanMasterClock     1         -         P 100.0 R 45.0 F 55.0
+dft_clk_i          MasterClock         1         -         P 100.0 R 45.0 F 55.0
+dft_rst_i          Reset               0         -         P 100.0 R 55.0 F 45.0
+sda_pad_o          Constant            -         -
+sda_pad_o          Functional          -         -
+scl_pad_o          Constant            -         -
+scl_pad_o          Functional          -         -
 
 1

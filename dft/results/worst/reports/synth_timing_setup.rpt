@@ -7,7 +7,7 @@ Report : timing
         -max_paths 2
 Design : i2c_master_top
 Version: O-2018.06-SP1
-Date   : Mon Aug 17 20:37:45 2026
+Date   : Tue Aug 18 02:08:06 2026
 ****************************************
 
 Operating Conditions: WORST   Library: saed90nm_max_hvt
@@ -22,7 +22,7 @@ Wire Load Model Mode: enclosed
 
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
-  i2c_master_bit_ctrl
+  i2c_master_bit_ctrl_test_1
                      8000                  saed90nm_max_hvt
   i2c_master_top     16000                 saed90nm_max_hvt
 
@@ -31,36 +31,45 @@ Wire Load Model Mode: enclosed
   byte_controller/bit_controller/scl_oen_reg/CLK (SDFFASX1_HVT)
                                                           0.00       0.00 r
   byte_controller/bit_controller/scl_oen_reg/Q (SDFFASX1_HVT)
-                                                          1.92       1.92 f
-  byte_controller/bit_controller/U250/Z (NBUFFX8_HVT)     1.55       3.47 f
-  byte_controller/bit_controller/scl_oen (i2c_master_bit_ctrl)
-                                                          0.00       3.47 f
-  byte_controller/scl_oen (i2c_master_byte_ctrl)          0.00       3.47 f
-  scl_padoen_o (out)                                      2.13       5.60 f
-  data arrival time                                                  5.60
+                                                          2.04       2.04 f
+  byte_controller/bit_controller/U250/Z (NBUFFX8_HVT)     2.08       4.12 f
+  byte_controller/bit_controller/scl_oen (i2c_master_bit_ctrl_test_1)
+                                                          0.00       4.12 f
+  byte_controller/scl_oen (i2c_master_byte_ctrl_test_1)
+                                                          0.00       4.12 f
+  scl_padoen_o (out)                                      2.13       6.25 f
+  data arrival time                                                  6.25
   --------------------------------------------------------------------------
   (Path is unconstrained)
 
 
-  Startpoint: wb_ack_o_reg
+  Startpoint: byte_controller/bit_controller/sda_oen_reg
               (rising edge-triggered flip-flop)
-  Endpoint: wb_ack_o (output port clocked by wb_clk_i)
+  Endpoint: sda_padoen_o
+            (output port clocked by wb_clk_i)
   Path Group: (none)
   Path Type: max
 
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
+  i2c_master_bit_ctrl_test_1
+                     8000                  saed90nm_max_hvt
   i2c_master_top     16000                 saed90nm_max_hvt
 
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  wb_ack_o_reg/CLK (SDFFX1_HVT)            0.00       0.00 r
-  wb_ack_o_reg/QN (SDFFX1_HVT)             1.18       1.18 r
-  U178/Z (NBUFFX2_HVT)                     0.61       1.80 r
-  U152/ZN (IBUFFX8_HVT)                    0.99       2.78 f
-  wb_ack_o (out)                           2.13       4.91 f
-  data arrival time                                   4.91
-  -----------------------------------------------------------
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  byte_controller/bit_controller/sda_oen_reg/CLK (SDFFASX1_HVT)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/sda_oen_reg/Q (SDFFASX1_HVT)
+                                                          2.00       2.00 f
+  byte_controller/bit_controller/U251/Z (NBUFFX8_HVT)     1.18       3.18 f
+  byte_controller/bit_controller/sda_oen (i2c_master_bit_ctrl_test_1)
+                                                          0.00       3.18 f
+  byte_controller/sda_oen (i2c_master_byte_ctrl_test_1)
+                                                          0.00       3.18 f
+  sda_padoen_o (out)                                      2.13       5.31 f
+  data arrival time                                                  5.31
+  --------------------------------------------------------------------------
   (Path is unconstrained)
 
 

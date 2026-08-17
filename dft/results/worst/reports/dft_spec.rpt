@@ -3,7 +3,7 @@
 Report : DFT signals
 Design : i2c_master_top
 Version: O-2018.06-SP1
-Date   : Mon Aug 17 20:37:46 2026
+Date   : Tue Aug 18 02:08:08 2026
 ****************************************
 
 ========================================
@@ -12,7 +12,28 @@ VIEW     : Specification
 ========================================
 Port               SignalType          Active    Hookup    Timing    Usage
 ----------         ----------          ------    ------    ------    -----
-scan_reset         Reset               1         -         -         -
+test_mode          TestMode            1         -         -         -
+Scan_Data_In       ScanDataIn          -         -         Delay 0.0 -
+Scan_Data_Out      ScanDataOut         -         -         -         -
+Scan_En            ScanEnable          1         -         -         Scan
+
+========================================
+TEST MODE: Internal_scan
+VIEW     : Specification
+========================================
+Port               SignalType          Active    Hookup    Timing    Usage
+----------         ----------          ------    ------    ------    -----
+test_mode          TestMode            1         -         -         -
+Scan_Data_In       ScanDataIn          -         -         Delay 0.0 -
+Scan_Data_Out      ScanDataOut         -         -         -         -
+Scan_En            ScanEnable          1         -         -         Scan
+
+========================================
+TEST MODE: Mission_mode
+VIEW     : Specification
+========================================
+Port               SignalType          Active    Hookup    Timing    Usage
+----------         ----------          ------    ------    ------    -----
 test_mode          TestMode            1         -         -         -
 Scan_Data_In       ScanDataIn          -         -         Delay 0.0 -
 Scan_Data_Out      ScanDataOut         -         -         -         -

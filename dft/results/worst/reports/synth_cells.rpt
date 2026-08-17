@@ -3,7 +3,7 @@
 Report : cell
 Design : i2c_master_top
 Version: O-2018.06-SP1
-Date   : Mon Aug 17 20:37:48 2026
+Date   : Tue Aug 18 02:08:10 2026
 ****************************************
 
 Attributes:
@@ -465,15 +465,165 @@ U337                      INVX1_HVT       saed90nm_max_hvt
                                                           6.451200  
 U338                      INVX4_HVT       saed90nm_max_hvt
                                                           9.216000  
-U339                      IBUFFX32_HVT    saed90nm_max_hvt
-                                                          56.217602 
-U340                      IBUFFX32_HVT    saed90nm_max_hvt
-                                                          56.217602 
-U341                      IBUFFX32_HVT    saed90nm_max_hvt
-                                                          56.217602 
+U339                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U340                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U341                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U342                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U343                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U344                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U345                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U346                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U347                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U348                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U349                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U350                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U351                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U352                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U353                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U354                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U355                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U356                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U357                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U358                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U359                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U360                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U361                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U362                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U363                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U364                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U365                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U366                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U367                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U368                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U369                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U370                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U371                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U372                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U373                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U374                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U375                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U376                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U377                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U378                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U379                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U380                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U381                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U382                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U383                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U384                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U385                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U386                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U387                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U388                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U389                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U390                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U391                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U392                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U393                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U394                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U395                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U396                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U397                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U398                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U399                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U400                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U401                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U402                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U403                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U404                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U405                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U406                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U407                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U408                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U409                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U410                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U411                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U412                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 
+U413                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U414                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U415                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
+U416                      IBUFFX4_HVT     saed90nm_max_hvt
+                                                          12.902400 d
 al_reg                    SDFFARX1_HVT    saed90nm_max_hvt
                                                           37.785599 n
-byte_controller           i2c_master_byte_ctrl            9916.415938
+byte_controller           i2c_master_byte_ctrl_test_1     9443.635122
                                                                     h, n
 cr_reg_0_                 SDFFARX1_HVT    saed90nm_max_hvt
                                                           37.785599 n
@@ -582,5 +732,5 @@ wb_dat_o_reg_7_           SDFFX1_HVT      saed90nm_max_hvt
 wb_inta_o_reg             SDFFARX1_HVT    saed90nm_max_hvt
                                                           37.785599 n
 --------------------------------------------------------------------------------
-Total 282 cells                                           14249.779096
+Total 357 cells                                           14614.732676
 1
