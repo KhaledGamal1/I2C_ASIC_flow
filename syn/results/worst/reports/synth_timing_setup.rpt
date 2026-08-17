@@ -6,15 +6,15 @@ Report : timing
         -max_paths 10
 Design : i2c_master_top
 Version: O-2018.06-SP1
-Date   : Sat Aug 15 22:44:27 2026
+Date   : Mon Aug 17 17:04:32 2026
 ****************************************
 
 Operating Conditions: WORST   Library: saed90nm_max_hvt
 Wire Load Model Mode: enclosed
 
-  Startpoint: byte_controller/bit_controller/filter_cnt_reg[6]
+  Startpoint: byte_controller/bit_controller/cnt_reg[11]
               (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/filter_cnt_reg[8]
+  Endpoint: byte_controller/bit_controller/cnt_reg[5]
             (rising edge-triggered flip-flop clocked by wb_clk_i)
   Path Group: wb_clk_i
   Path Type: max
@@ -29,368 +29,36 @@ Wire Load Model Mode: enclosed
   --------------------------------------------------------------------------
   clock wb_clk_i (rise edge)                              0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  byte_controller/bit_controller/filter_cnt_reg[6]/CLK (DFFARX1_HVT)
+  byte_controller/bit_controller/cnt_reg[11]/CLK (DFFARX1_HVT)
                                                           0.00       0.00 r
-  byte_controller/bit_controller/filter_cnt_reg[6]/QN (DFFARX1_HVT)
-                                                          1.05       1.05 r
-  byte_controller/bit_controller/U247/Q (AND4X1_HVT)      1.06       2.11 r
-  byte_controller/bit_controller/U246/Q (AND4X1_HVT)      0.95       3.06 r
-  byte_controller/bit_controller/U221/Q (AND2X4_HVT)      1.11       4.17 r
-  byte_controller/bit_controller/U209/Q (OR3X1_HVT)       0.62       4.79 r
-  byte_controller/bit_controller/U242/ZN (INVX0_HVT)      1.05       5.84 f
-  byte_controller/bit_controller/U178/Q (AO22X1_HVT)      1.25       7.09 f
-  byte_controller/bit_controller/filter_cnt_reg[8]/D (DFFARX2_HVT)
-                                                          0.03       7.12 f
-  data arrival time                                                  7.12
+  byte_controller/bit_controller/cnt_reg[11]/QN (DFFARX1_HVT)
+                                                          1.12       1.12 r
+  byte_controller/bit_controller/U17/QN (NAND4X0_HVT)     0.93       2.05 f
+  byte_controller/bit_controller/U187/Q (OR4X1_HVT)       1.00       3.05 f
+  byte_controller/bit_controller/U274/QN (NAND4X1_HVT)
+                                                          0.83       3.89 r
+  byte_controller/bit_controller/U136/Z (NBUFFX2_HVT)     0.84       4.72 r
+  byte_controller/bit_controller/U128/Z (NBUFFX2_HVT)     0.79       5.51 r
+  byte_controller/bit_controller/U30/Q (AO222X1_HVT)      1.43       6.94 r
+  byte_controller/bit_controller/cnt_reg[5]/D (DFFARX1_HVT)
+                                                          0.03       6.97 r
+  data arrival time                                                  6.97
 
   clock wb_clk_i (rise edge)                              8.00       8.00
   clock network delay (ideal)                             0.00       8.00
   clock uncertainty                                      -0.24       7.76
-  byte_controller/bit_controller/filter_cnt_reg[8]/CLK (DFFARX2_HVT)
-                                                          0.00       7.76 r
-  library setup time                                     -0.64       7.12
-  data required time                                                 7.12
-  --------------------------------------------------------------------------
-  data required time                                                 7.12
-  data arrival time                                                 -7.12
-  --------------------------------------------------------------------------
-  slack (MET)                                                        0.00
-
-
-  Startpoint: byte_controller/c_state_reg[1]
-              (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Endpoint: byte_controller/c_state_reg[4]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  i2c_master_top     16000                 saed90nm_max_hvt
-  i2c_master_byte_ctrl
-                     16000                 saed90nm_max_hvt
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  byte_controller/c_state_reg[1]/CLK (DFFARX1_HVT)        0.00       0.00 r
-  byte_controller/c_state_reg[1]/QN (DFFARX1_HVT)         1.08       1.08 r
-  byte_controller/U106/Q (AND2X1_HVT)                     0.72       1.80 r
-  byte_controller/U21/QN (NAND4X1_HVT)                    0.96       2.76 f
-  byte_controller/U30/Q (AO221X2_HVT)                     1.34       4.10 f
-  byte_controller/U103/Z (NBUFFX2_HVT)                    0.42       4.52 f
-  byte_controller/U102/ZN (INVX0_HVT)                     0.37       4.89 r
-  byte_controller/U95/Q (AO22X2_HVT)                      1.94       6.83 r
-  byte_controller/c_state_reg[4]/D (DFFARX2_HVT)          0.02       6.85 r
-  data arrival time                                                  6.85
-
-  clock wb_clk_i (rise edge)                              8.00       8.00
-  clock network delay (ideal)                             0.00       8.00
-  clock uncertainty                                      -0.24       7.76
-  byte_controller/c_state_reg[4]/CLK (DFFARX2_HVT)        0.00       7.76 r
-  library setup time                                     -0.90       6.86
-  data required time                                                 6.86
-  --------------------------------------------------------------------------
-  data required time                                                 6.86
-  data arrival time                                                 -6.85
-  --------------------------------------------------------------------------
-  slack (MET)                                                        0.01
-
-
-  Startpoint: byte_controller/bit_controller/filter_cnt_reg[6]
-              (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/filter_cnt_reg[3]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  i2c_master_top     16000                 saed90nm_max_hvt
-  i2c_master_bit_ctrl
-                     8000                  saed90nm_max_hvt
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  byte_controller/bit_controller/filter_cnt_reg[6]/CLK (DFFARX1_HVT)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/filter_cnt_reg[6]/QN (DFFARX1_HVT)
-                                                          1.05       1.05 r
-  byte_controller/bit_controller/U247/Q (AND4X1_HVT)      1.06       2.11 r
-  byte_controller/bit_controller/U246/Q (AND4X1_HVT)      0.95       3.06 r
-  byte_controller/bit_controller/U221/Q (AND2X4_HVT)      1.11       4.17 r
-  byte_controller/bit_controller/U209/Q (OR3X1_HVT)       0.62       4.79 r
-  byte_controller/bit_controller/U242/ZN (INVX0_HVT)      1.05       5.84 f
-  byte_controller/bit_controller/U108/Q (AO22X1_HVT)      1.26       7.09 f
-  byte_controller/bit_controller/filter_cnt_reg[3]/D (DFFARX1_HVT)
-                                                          0.03       7.12 f
-  data arrival time                                                  7.12
-
-  clock wb_clk_i (rise edge)                              8.00       8.00
-  clock network delay (ideal)                             0.00       8.00
-  clock uncertainty                                      -0.24       7.76
-  byte_controller/bit_controller/filter_cnt_reg[3]/CLK (DFFARX1_HVT)
-                                                          0.00       7.76 r
-  library setup time                                     -0.62       7.14
-  data required time                                                 7.14
-  --------------------------------------------------------------------------
-  data required time                                                 7.14
-  data arrival time                                                 -7.12
-  --------------------------------------------------------------------------
-  slack (MET)                                                        0.01
-
-
-  Startpoint: byte_controller/bit_controller/filter_cnt_reg[6]
-              (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/filter_cnt_reg[2]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  i2c_master_top     16000                 saed90nm_max_hvt
-  i2c_master_bit_ctrl
-                     8000                  saed90nm_max_hvt
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  byte_controller/bit_controller/filter_cnt_reg[6]/CLK (DFFARX1_HVT)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/filter_cnt_reg[6]/QN (DFFARX1_HVT)
-                                                          1.05       1.05 r
-  byte_controller/bit_controller/U247/Q (AND4X1_HVT)      1.06       2.11 r
-  byte_controller/bit_controller/U246/Q (AND4X1_HVT)      0.95       3.06 r
-  byte_controller/bit_controller/U221/Q (AND2X4_HVT)      1.11       4.17 r
-  byte_controller/bit_controller/U209/Q (OR3X1_HVT)       0.62       4.79 r
-  byte_controller/bit_controller/U242/ZN (INVX0_HVT)      1.05       5.84 f
-  byte_controller/bit_controller/U109/Q (AO22X1_HVT)      1.26       7.09 f
-  byte_controller/bit_controller/filter_cnt_reg[2]/D (DFFARX1_HVT)
-                                                          0.03       7.12 f
-  data arrival time                                                  7.12
-
-  clock wb_clk_i (rise edge)                              8.00       8.00
-  clock network delay (ideal)                             0.00       8.00
-  clock uncertainty                                      -0.24       7.76
-  byte_controller/bit_controller/filter_cnt_reg[2]/CLK (DFFARX1_HVT)
-                                                          0.00       7.76 r
-  library setup time                                     -0.62       7.14
-  data required time                                                 7.14
-  --------------------------------------------------------------------------
-  data required time                                                 7.14
-  data arrival time                                                 -7.12
-  --------------------------------------------------------------------------
-  slack (MET)                                                        0.01
-
-
-  Startpoint: byte_controller/bit_controller/filter_cnt_reg[6]
-              (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/filter_cnt_reg[10]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  i2c_master_top     16000                 saed90nm_max_hvt
-  i2c_master_bit_ctrl
-                     8000                  saed90nm_max_hvt
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  byte_controller/bit_controller/filter_cnt_reg[6]/CLK (DFFARX1_HVT)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/filter_cnt_reg[6]/QN (DFFARX1_HVT)
-                                                          1.05       1.05 r
-  byte_controller/bit_controller/U247/Q (AND4X1_HVT)      1.06       2.11 r
-  byte_controller/bit_controller/U246/Q (AND4X1_HVT)      0.95       3.06 r
-  byte_controller/bit_controller/U221/Q (AND2X4_HVT)      1.11       4.17 r
-  byte_controller/bit_controller/U209/Q (OR3X1_HVT)       0.62       4.79 r
-  byte_controller/bit_controller/U242/ZN (INVX0_HVT)      1.05       5.84 f
-  byte_controller/bit_controller/U176/Q (AO22X1_HVT)      1.26       7.09 f
-  byte_controller/bit_controller/filter_cnt_reg[10]/D (DFFARX1_HVT)
-                                                          0.03       7.12 f
-  data arrival time                                                  7.12
-
-  clock wb_clk_i (rise edge)                              8.00       8.00
-  clock network delay (ideal)                             0.00       8.00
-  clock uncertainty                                      -0.24       7.76
-  byte_controller/bit_controller/filter_cnt_reg[10]/CLK (DFFARX1_HVT)
-                                                          0.00       7.76 r
-  library setup time                                     -0.62       7.14
-  data required time                                                 7.14
-  --------------------------------------------------------------------------
-  data required time                                                 7.14
-  data arrival time                                                 -7.12
-  --------------------------------------------------------------------------
-  slack (MET)                                                        0.01
-
-
-  Startpoint: byte_controller/bit_controller/cnt_reg[10]
-              (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/cnt_reg[15]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  i2c_master_top     16000                 saed90nm_max_hvt
-  i2c_master_bit_ctrl
-                     8000                  saed90nm_max_hvt
-  i2c_master_bit_ctrl_DW01_dec_1
-                     8000                  saed90nm_max_hvt
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  byte_controller/bit_controller/cnt_reg[10]/CLK (DFFARX1_HVT)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/cnt_reg[10]/Q (DFFARX1_HVT)
-                                                          1.59       1.59 f
-  byte_controller/bit_controller/sub_228/A[10] (i2c_master_bit_ctrl_DW01_dec_1)
-                                                          0.00       1.59 f
-  byte_controller/bit_controller/sub_228/U55/Q (OR2X1_HVT)
-                                                          0.66       2.25 f
-  byte_controller/bit_controller/sub_228/U1/QN (NOR2X1_HVT)
-                                                          0.22       2.46 r
-  byte_controller/bit_controller/sub_228/U31/Q (AND2X1_HVT)
-                                                          0.54       3.01 r
-  byte_controller/bit_controller/sub_228/U44/Q (AND2X1_HVT)
-                                                          0.67       3.68 r
-  byte_controller/bit_controller/sub_228/U34/QN (NAND2X1_HVT)
-                                                          0.48       4.16 f
-  byte_controller/bit_controller/sub_228/U71/QN (NOR2X1_HVT)
-                                                          0.27       4.43 r
-  byte_controller/bit_controller/sub_228/U24/ZN (INVX0_HVT)
-                                                          0.43       4.86 f
-  byte_controller/bit_controller/sub_228/U13/QN (NOR2X1_HVT)
-                                                          0.40       5.26 r
-  byte_controller/bit_controller/sub_228/U74/Q (XOR2X1_HVT)
-                                                          0.66       5.92 r
-  byte_controller/bit_controller/sub_228/SUM[15] (i2c_master_bit_ctrl_DW01_dec_1)
-                                                          0.00       5.92 r
-  byte_controller/bit_controller/U10/Q (AO222X1_HVT)      0.91       6.83 r
-  byte_controller/bit_controller/cnt_reg[15]/D (DFFARX2_HVT)
-                                                          0.03       6.86 r
-  data arrival time                                                  6.86
-
-  clock wb_clk_i (rise edge)                              8.00       8.00
-  clock network delay (ideal)                             0.00       8.00
-  clock uncertainty                                      -0.24       7.76
-  byte_controller/bit_controller/cnt_reg[15]/CLK (DFFARX2_HVT)
+  byte_controller/bit_controller/cnt_reg[5]/CLK (DFFARX1_HVT)
                                                           0.00       7.76 r
   library setup time                                     -0.89       6.87
   data required time                                                 6.87
   --------------------------------------------------------------------------
   data required time                                                 6.87
-  data arrival time                                                 -6.86
+  data arrival time                                                 -6.97
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.01
+  slack (VIOLATED)                                                  -0.10
 
 
-  Startpoint: byte_controller/bit_controller/filter_cnt_reg[6]
-              (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/filter_cnt_reg[9]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  i2c_master_top     16000                 saed90nm_max_hvt
-  i2c_master_bit_ctrl
-                     8000                  saed90nm_max_hvt
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  byte_controller/bit_controller/filter_cnt_reg[6]/CLK (DFFARX1_HVT)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/filter_cnt_reg[6]/QN (DFFARX1_HVT)
-                                                          1.05       1.05 r
-  byte_controller/bit_controller/U247/Q (AND4X1_HVT)      1.06       2.11 r
-  byte_controller/bit_controller/U246/Q (AND4X1_HVT)      0.95       3.06 r
-  byte_controller/bit_controller/U221/Q (AND2X4_HVT)      1.11       4.17 r
-  byte_controller/bit_controller/U209/Q (OR3X1_HVT)       0.62       4.79 r
-  byte_controller/bit_controller/U254/ZN (INVX0_HVT)      1.04       5.83 f
-  byte_controller/bit_controller/U233/QN (NAND2X0_HVT)
-                                                          0.90       6.73 r
-  byte_controller/bit_controller/U199/QN (NAND2X1_HVT)
-                                                          0.35       7.08 f
-  byte_controller/bit_controller/filter_cnt_reg[9]/D (DFFARX1_HVT)
-                                                          0.03       7.11 f
-  data arrival time                                                  7.11
-
-  clock wb_clk_i (rise edge)                              8.00       8.00
-  clock network delay (ideal)                             0.00       8.00
-  clock uncertainty                                      -0.24       7.76
-  byte_controller/bit_controller/filter_cnt_reg[9]/CLK (DFFARX1_HVT)
-                                                          0.00       7.76 r
-  library setup time                                     -0.63       7.13
-  data required time                                                 7.13
-  --------------------------------------------------------------------------
-  data required time                                                 7.13
-  data arrival time                                                 -7.11
-  --------------------------------------------------------------------------
-  slack (MET)                                                        0.02
-
-
-  Startpoint: byte_controller/bit_controller/filter_cnt_reg[6]
-              (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/filter_cnt_reg[5]
-            (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Path Group: wb_clk_i
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  i2c_master_top     16000                 saed90nm_max_hvt
-  i2c_master_bit_ctrl
-                     8000                  saed90nm_max_hvt
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock wb_clk_i (rise edge)                              0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  byte_controller/bit_controller/filter_cnt_reg[6]/CLK (DFFARX1_HVT)
-                                                          0.00       0.00 r
-  byte_controller/bit_controller/filter_cnt_reg[6]/QN (DFFARX1_HVT)
-                                                          1.05       1.05 r
-  byte_controller/bit_controller/U247/Q (AND4X1_HVT)      1.06       2.11 r
-  byte_controller/bit_controller/U246/Q (AND4X1_HVT)      0.95       3.06 r
-  byte_controller/bit_controller/U221/Q (AND2X4_HVT)      1.11       4.17 r
-  byte_controller/bit_controller/U209/Q (OR3X1_HVT)       0.62       4.79 r
-  byte_controller/bit_controller/U254/ZN (INVX0_HVT)      1.04       5.83 f
-  byte_controller/bit_controller/U106/Q (AO22X1_HVT)      1.22       7.05 f
-  byte_controller/bit_controller/filter_cnt_reg[5]/D (DFFARX2_HVT)
-                                                          0.03       7.08 f
-  data arrival time                                                  7.08
-
-  clock wb_clk_i (rise edge)                              8.00       8.00
-  clock network delay (ideal)                             0.00       8.00
-  clock uncertainty                                      -0.24       7.76
-  byte_controller/bit_controller/filter_cnt_reg[5]/CLK (DFFARX2_HVT)
-                                                          0.00       7.76 r
-  library setup time                                     -0.64       7.12
-  data required time                                                 7.12
-  --------------------------------------------------------------------------
-  data required time                                                 7.12
-  data arrival time                                                 -7.08
-  --------------------------------------------------------------------------
-  slack (MET)                                                        0.04
-
-
-  Startpoint: byte_controller/bit_controller/cnt_reg[0]
+  Startpoint: byte_controller/bit_controller/cnt_reg[11]
               (rising edge-triggered flip-flop clocked by wb_clk_i)
   Endpoint: byte_controller/bit_controller/cnt_reg[4]
             (rising edge-triggered flip-flop clocked by wb_clk_i)
@@ -402,41 +70,25 @@ Wire Load Model Mode: enclosed
   i2c_master_top     16000                 saed90nm_max_hvt
   i2c_master_bit_ctrl
                      8000                  saed90nm_max_hvt
-  i2c_master_bit_ctrl_DW01_dec_1
-                     8000                  saed90nm_max_hvt
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock wb_clk_i (rise edge)                              0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  byte_controller/bit_controller/cnt_reg[0]/CLK (DFFARX1_HVT)
+  byte_controller/bit_controller/cnt_reg[11]/CLK (DFFARX1_HVT)
                                                           0.00       0.00 r
-  byte_controller/bit_controller/cnt_reg[0]/Q (DFFARX1_HVT)
-                                                          1.59       1.59 f
-  byte_controller/bit_controller/sub_228/A[0] (i2c_master_bit_ctrl_DW01_dec_1)
-                                                          0.00       1.59 f
-  byte_controller/bit_controller/sub_228/U41/QN (NOR2X0_HVT)
-                                                          0.46       2.05 r
-  byte_controller/bit_controller/sub_228/U35/Q (AND2X1_HVT)
-                                                          0.74       2.79 r
-  byte_controller/bit_controller/sub_228/U59/ZN (IBUFFX4_HVT)
-                                                          0.93       3.73 f
-  byte_controller/bit_controller/sub_228/U64/Q (OR2X1_HVT)
-                                                          0.60       4.33 f
-  byte_controller/bit_controller/sub_228/U67/Z (NBUFFX2_HVT)
-                                                          0.54       4.87 f
-  byte_controller/bit_controller/sub_228/U66/ZN (INVX0_HVT)
-                                                          0.28       5.15 r
-  byte_controller/bit_controller/sub_228/U61/Z (NBUFFX2_HVT)
-                                                          0.38       5.53 r
-  byte_controller/bit_controller/sub_228/U60/Q (AO21X1_HVT)
-                                                          0.36       5.88 r
-  byte_controller/bit_controller/sub_228/SUM[4] (i2c_master_bit_ctrl_DW01_dec_1)
-                                                          0.00       5.88 r
-  byte_controller/bit_controller/U32/Q (AO222X1_HVT)      0.91       6.80 r
+  byte_controller/bit_controller/cnt_reg[11]/QN (DFFARX1_HVT)
+                                                          1.12       1.12 r
+  byte_controller/bit_controller/U17/QN (NAND4X0_HVT)     0.93       2.05 f
+  byte_controller/bit_controller/U187/Q (OR4X1_HVT)       1.00       3.05 f
+  byte_controller/bit_controller/U274/QN (NAND4X1_HVT)
+                                                          0.83       3.89 r
+  byte_controller/bit_controller/U136/Z (NBUFFX2_HVT)     0.84       4.72 r
+  byte_controller/bit_controller/U128/Z (NBUFFX2_HVT)     0.79       5.51 r
+  byte_controller/bit_controller/U32/Q (AO222X1_HVT)      1.43       6.94 r
   byte_controller/bit_controller/cnt_reg[4]/D (DFFARX1_HVT)
-                                                          0.03       6.83 r
-  data arrival time                                                  6.83
+                                                          0.03       6.97 r
+  data arrival time                                                  6.97
 
   clock wb_clk_i (rise edge)                              8.00       8.00
   clock network delay (ideal)                             0.00       8.00
@@ -447,14 +99,14 @@ Wire Load Model Mode: enclosed
   data required time                                                 6.87
   --------------------------------------------------------------------------
   data required time                                                 6.87
-  data arrival time                                                 -6.83
+  data arrival time                                                 -6.97
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.05
+  slack (VIOLATED)                                                  -0.10
 
 
-  Startpoint: byte_controller/bit_controller/filter_cnt_reg[2]
+  Startpoint: byte_controller/bit_controller/cnt_reg[11]
               (rising edge-triggered flip-flop clocked by wb_clk_i)
-  Endpoint: byte_controller/bit_controller/filter_cnt_reg[0]
+  Endpoint: byte_controller/bit_controller/cnt_reg[11]
             (rising edge-triggered flip-flop clocked by wb_clk_i)
   Path Group: wb_clk_i
   Path Type: max
@@ -469,38 +121,363 @@ Wire Load Model Mode: enclosed
   --------------------------------------------------------------------------
   clock wb_clk_i (rise edge)                              0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  byte_controller/bit_controller/filter_cnt_reg[2]/CLK (DFFARX1_HVT)
+  byte_controller/bit_controller/cnt_reg[11]/CLK (DFFARX1_HVT)
                                                           0.00       0.00 r
-  byte_controller/bit_controller/filter_cnt_reg[2]/QN (DFFARX1_HVT)
-                                                          1.09       1.09 r
-  byte_controller/bit_controller/U189/QN (NAND4X0_HVT)
-                                                          0.70       1.79 f
-  byte_controller/bit_controller/U76/QN (NOR4X1_HVT)      0.82       2.61 r
-  byte_controller/bit_controller/U117/Q (AND2X2_HVT)      0.72       3.34 r
-  byte_controller/bit_controller/U224/QN (NAND2X1_HVT)
-                                                          0.36       3.70 f
-  byte_controller/bit_controller/U241/ZN (INVX0_HVT)      0.37       4.06 r
-  byte_controller/bit_controller/U240/ZN (INVX0_HVT)      0.37       4.43 f
-  byte_controller/bit_controller/U230/QN (NOR2X1_HVT)     0.24       4.67 r
-  byte_controller/bit_controller/U258/ZN (INVX0_HVT)      0.40       5.07 f
-  byte_controller/bit_controller/U260/ZN (INVX0_HVT)      0.36       5.43 r
-  byte_controller/bit_controller/U111/Q (AO22X1_HVT)      1.39       6.82 r
-  byte_controller/bit_controller/filter_cnt_reg[0]/D (DFFARX1_HVT)
-                                                          0.03       6.85 r
-  data arrival time                                                  6.85
+  byte_controller/bit_controller/cnt_reg[11]/QN (DFFARX1_HVT)
+                                                          1.12       1.12 r
+  byte_controller/bit_controller/U17/QN (NAND4X0_HVT)     0.93       2.05 f
+  byte_controller/bit_controller/U187/Q (OR4X1_HVT)       1.00       3.05 f
+  byte_controller/bit_controller/U274/QN (NAND4X1_HVT)
+                                                          0.83       3.89 r
+  byte_controller/bit_controller/U136/Z (NBUFFX2_HVT)     0.84       4.72 r
+  byte_controller/bit_controller/U128/Z (NBUFFX2_HVT)     0.79       5.51 r
+  byte_controller/bit_controller/U18/Q (AO222X1_HVT)      1.43       6.94 r
+  byte_controller/bit_controller/cnt_reg[11]/D (DFFARX1_HVT)
+                                                          0.03       6.97 r
+  data arrival time                                                  6.97
 
   clock wb_clk_i (rise edge)                              8.00       8.00
   clock network delay (ideal)                             0.00       8.00
   clock uncertainty                                      -0.24       7.76
-  byte_controller/bit_controller/filter_cnt_reg[0]/CLK (DFFARX1_HVT)
+  byte_controller/bit_controller/cnt_reg[11]/CLK (DFFARX1_HVT)
                                                           0.00       7.76 r
-  library setup time                                     -0.86       6.90
-  data required time                                                 6.90
+  library setup time                                     -0.89       6.87
+  data required time                                                 6.87
   --------------------------------------------------------------------------
-  data required time                                                 6.90
-  data arrival time                                                 -6.85
+  data required time                                                 6.87
+  data arrival time                                                 -6.97
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.05
+  slack (VIOLATED)                                                  -0.10
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[11]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[8]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     16000                 saed90nm_max_hvt
+  i2c_master_bit_ctrl
+                     8000                  saed90nm_max_hvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[11]/CLK (DFFARX1_HVT)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[11]/QN (DFFARX1_HVT)
+                                                          1.12       1.12 r
+  byte_controller/bit_controller/U17/QN (NAND4X0_HVT)     0.93       2.05 f
+  byte_controller/bit_controller/U187/Q (OR4X1_HVT)       1.00       3.05 f
+  byte_controller/bit_controller/U274/QN (NAND4X1_HVT)
+                                                          0.83       3.89 r
+  byte_controller/bit_controller/U136/Z (NBUFFX2_HVT)     0.84       4.72 r
+  byte_controller/bit_controller/U146/Z (NBUFFX2_HVT)     0.79       5.51 r
+  byte_controller/bit_controller/U24/Q (AO222X1_HVT)      1.43       6.94 r
+  byte_controller/bit_controller/cnt_reg[8]/D (DFFARX1_HVT)
+                                                          0.03       6.97 r
+  data arrival time                                                  6.97
+
+  clock wb_clk_i (rise edge)                              8.00       8.00
+  clock network delay (ideal)                             0.00       8.00
+  clock uncertainty                                      -0.24       7.76
+  byte_controller/bit_controller/cnt_reg[8]/CLK (DFFARX1_HVT)
+                                                          0.00       7.76 r
+  library setup time                                     -0.89       6.87
+  data required time                                                 6.87
+  --------------------------------------------------------------------------
+  data required time                                                 6.87
+  data arrival time                                                 -6.97
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.10
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[11]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[6]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     16000                 saed90nm_max_hvt
+  i2c_master_bit_ctrl
+                     8000                  saed90nm_max_hvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[11]/CLK (DFFARX1_HVT)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[11]/QN (DFFARX1_HVT)
+                                                          1.12       1.12 r
+  byte_controller/bit_controller/U17/QN (NAND4X0_HVT)     0.93       2.05 f
+  byte_controller/bit_controller/U187/Q (OR4X1_HVT)       1.00       3.05 f
+  byte_controller/bit_controller/U274/QN (NAND4X1_HVT)
+                                                          0.83       3.89 r
+  byte_controller/bit_controller/U136/Z (NBUFFX2_HVT)     0.84       4.72 r
+  byte_controller/bit_controller/U128/Z (NBUFFX2_HVT)     0.79       5.51 r
+  byte_controller/bit_controller/U28/Q (AO222X1_HVT)      1.43       6.94 r
+  byte_controller/bit_controller/cnt_reg[6]/D (DFFARX1_HVT)
+                                                          0.03       6.97 r
+  data arrival time                                                  6.97
+
+  clock wb_clk_i (rise edge)                              8.00       8.00
+  clock network delay (ideal)                             0.00       8.00
+  clock uncertainty                                      -0.24       7.76
+  byte_controller/bit_controller/cnt_reg[6]/CLK (DFFARX1_HVT)
+                                                          0.00       7.76 r
+  library setup time                                     -0.89       6.87
+  data required time                                                 6.87
+  --------------------------------------------------------------------------
+  data required time                                                 6.87
+  data arrival time                                                 -6.97
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.10
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[11]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[7]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     16000                 saed90nm_max_hvt
+  i2c_master_bit_ctrl
+                     8000                  saed90nm_max_hvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[11]/CLK (DFFARX1_HVT)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[11]/QN (DFFARX1_HVT)
+                                                          1.12       1.12 r
+  byte_controller/bit_controller/U17/QN (NAND4X0_HVT)     0.93       2.05 f
+  byte_controller/bit_controller/U187/Q (OR4X1_HVT)       1.00       3.05 f
+  byte_controller/bit_controller/U274/QN (NAND4X1_HVT)
+                                                          0.83       3.89 r
+  byte_controller/bit_controller/U136/Z (NBUFFX2_HVT)     0.84       4.72 r
+  byte_controller/bit_controller/U146/Z (NBUFFX2_HVT)     0.79       5.51 r
+  byte_controller/bit_controller/U26/Q (AO222X1_HVT)      1.43       6.94 r
+  byte_controller/bit_controller/cnt_reg[7]/D (DFFARX1_HVT)
+                                                          0.03       6.97 r
+  data arrival time                                                  6.97
+
+  clock wb_clk_i (rise edge)                              8.00       8.00
+  clock network delay (ideal)                             0.00       8.00
+  clock uncertainty                                      -0.24       7.76
+  byte_controller/bit_controller/cnt_reg[7]/CLK (DFFARX1_HVT)
+                                                          0.00       7.76 r
+  library setup time                                     -0.89       6.87
+  data required time                                                 6.87
+  --------------------------------------------------------------------------
+  data required time                                                 6.87
+  data arrival time                                                 -6.97
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.10
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[11]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[13]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     16000                 saed90nm_max_hvt
+  i2c_master_bit_ctrl
+                     8000                  saed90nm_max_hvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[11]/CLK (DFFARX1_HVT)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[11]/QN (DFFARX1_HVT)
+                                                          1.12       1.12 r
+  byte_controller/bit_controller/U17/QN (NAND4X0_HVT)     0.93       2.05 f
+  byte_controller/bit_controller/U187/Q (OR4X1_HVT)       1.00       3.05 f
+  byte_controller/bit_controller/U274/QN (NAND4X1_HVT)
+                                                          0.83       3.89 r
+  byte_controller/bit_controller/U136/Z (NBUFFX2_HVT)     0.84       4.72 r
+  byte_controller/bit_controller/U146/Z (NBUFFX2_HVT)     0.79       5.51 r
+  byte_controller/bit_controller/U14/Q (AO222X1_HVT)      1.43       6.94 r
+  byte_controller/bit_controller/cnt_reg[13]/D (DFFARX2_HVT)
+                                                          0.03       6.97 r
+  data arrival time                                                  6.97
+
+  clock wb_clk_i (rise edge)                              8.00       8.00
+  clock network delay (ideal)                             0.00       8.00
+  clock uncertainty                                      -0.24       7.76
+  byte_controller/bit_controller/cnt_reg[13]/CLK (DFFARX2_HVT)
+                                                          0.00       7.76 r
+  library setup time                                     -0.89       6.87
+  data required time                                                 6.87
+  --------------------------------------------------------------------------
+  data required time                                                 6.87
+  data arrival time                                                 -6.97
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.10
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[11]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[15]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     16000                 saed90nm_max_hvt
+  i2c_master_bit_ctrl
+                     8000                  saed90nm_max_hvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[11]/CLK (DFFARX1_HVT)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[11]/QN (DFFARX1_HVT)
+                                                          1.12       1.12 r
+  byte_controller/bit_controller/U17/QN (NAND4X0_HVT)     0.93       2.05 f
+  byte_controller/bit_controller/U187/Q (OR4X1_HVT)       1.00       3.05 f
+  byte_controller/bit_controller/U274/QN (NAND4X1_HVT)
+                                                          0.83       3.89 r
+  byte_controller/bit_controller/U136/Z (NBUFFX2_HVT)     0.84       4.72 r
+  byte_controller/bit_controller/U146/Z (NBUFFX2_HVT)     0.79       5.51 r
+  byte_controller/bit_controller/U10/Q (AO222X1_HVT)      1.43       6.94 r
+  byte_controller/bit_controller/cnt_reg[15]/D (DFFARX2_HVT)
+                                                          0.03       6.97 r
+  data arrival time                                                  6.97
+
+  clock wb_clk_i (rise edge)                              8.00       8.00
+  clock network delay (ideal)                             0.00       8.00
+  clock uncertainty                                      -0.24       7.76
+  byte_controller/bit_controller/cnt_reg[15]/CLK (DFFARX2_HVT)
+                                                          0.00       7.76 r
+  library setup time                                     -0.89       6.87
+  data required time                                                 6.87
+  --------------------------------------------------------------------------
+  data required time                                                 6.87
+  data arrival time                                                 -6.97
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.10
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[10]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[10]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     16000                 saed90nm_max_hvt
+  i2c_master_bit_ctrl
+                     8000                  saed90nm_max_hvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[10]/CLK (DFFARX1_HVT)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[10]/QN (DFFARX1_HVT)
+                                                          1.09       1.09 r
+  byte_controller/bit_controller/U271/ZN (INVX0_HVT)      0.43       1.52 f
+  byte_controller/bit_controller/U272/ZN (INVX0_HVT)      0.19       1.71 r
+  byte_controller/bit_controller/U15/QN (NAND4X0_HVT)     0.51       2.22 f
+  byte_controller/bit_controller/U185/Q (OR4X1_HVT)       0.97       3.19 f
+  byte_controller/bit_controller/U181/QN (NAND4X0_HVT)
+                                                          0.28       3.47 r
+  byte_controller/bit_controller/U27/QN (NOR2X1_HVT)      0.35       3.83 f
+  byte_controller/bit_controller/U170/Q (OR2X1_HVT)       0.65       4.48 f
+  byte_controller/bit_controller/U164/ZN (INVX0_HVT)      0.57       5.05 r
+  byte_controller/bit_controller/U165/Z (NBUFFX2_HVT)     0.56       5.61 r
+  byte_controller/bit_controller/U20/Q (AO222X1_HVT)      1.32       6.93 r
+  byte_controller/bit_controller/cnt_reg[10]/D (DFFARX1_HVT)
+                                                          0.03       6.96 r
+  data arrival time                                                  6.96
+
+  clock wb_clk_i (rise edge)                              8.00       8.00
+  clock network delay (ideal)                             0.00       8.00
+  clock uncertainty                                      -0.24       7.76
+  byte_controller/bit_controller/cnt_reg[10]/CLK (DFFARX1_HVT)
+                                                          0.00       7.76 r
+  library setup time                                     -0.89       6.87
+  data required time                                                 6.87
+  --------------------------------------------------------------------------
+  data required time                                                 6.87
+  data arrival time                                                 -6.96
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.09
+
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[10]
+              (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[1]
+            (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  i2c_master_top     16000                 saed90nm_max_hvt
+  i2c_master_bit_ctrl
+                     8000                  saed90nm_max_hvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  byte_controller/bit_controller/cnt_reg[10]/CLK (DFFARX1_HVT)
+                                                          0.00       0.00 r
+  byte_controller/bit_controller/cnt_reg[10]/QN (DFFARX1_HVT)
+                                                          1.09       1.09 r
+  byte_controller/bit_controller/U271/ZN (INVX0_HVT)      0.43       1.52 f
+  byte_controller/bit_controller/U272/ZN (INVX0_HVT)      0.19       1.71 r
+  byte_controller/bit_controller/U15/QN (NAND4X0_HVT)     0.51       2.22 f
+  byte_controller/bit_controller/U185/Q (OR4X1_HVT)       0.97       3.19 f
+  byte_controller/bit_controller/U181/QN (NAND4X0_HVT)
+                                                          0.28       3.47 r
+  byte_controller/bit_controller/U27/QN (NOR2X1_HVT)      0.35       3.83 f
+  byte_controller/bit_controller/U170/Q (OR2X1_HVT)       0.65       4.48 f
+  byte_controller/bit_controller/U25/ZN (INVX0_HVT)       0.57       5.05 r
+  byte_controller/bit_controller/U196/Z (NBUFFX2_HVT)     0.56       5.61 r
+  byte_controller/bit_controller/U38/Q (AO222X1_HVT)      1.32       6.93 r
+  byte_controller/bit_controller/cnt_reg[1]/D (DFFARX1_HVT)
+                                                          0.03       6.96 r
+  data arrival time                                                  6.96
+
+  clock wb_clk_i (rise edge)                              8.00       8.00
+  clock network delay (ideal)                             0.00       8.00
+  clock uncertainty                                      -0.24       7.76
+  byte_controller/bit_controller/cnt_reg[1]/CLK (DFFARX1_HVT)
+                                                          0.00       7.76 r
+  library setup time                                     -0.89       6.87
+  data required time                                                 6.87
+  --------------------------------------------------------------------------
+  data required time                                                 6.87
+  data arrival time                                                 -6.96
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.09
 
 
 1

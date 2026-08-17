@@ -1,0 +1,53 @@
+In mode: all_dft...
+  Pre-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  	...checking for scan equivalents...
+  ...checking vector rules...
+  ...checking pre-dft rules...
+
+-----------------------------------------------------------------
+Begin Pre-DFT violations...
+
+ Warning: Clock input CLK of DFF ctr_reg_6_ was not controlled. (D1-1)
+Information: There are 152 other cells with the same violation. (TEST-171)
+ Warning: Set input SETB of DFF prer_reg_15_ was not controlled. (D2-1)
+Information: There are 28 other cells with the same violation. (TEST-171)
+ Warning: Reset input RSTB of DFF ctr_reg_6_ was not controlled. (D3-1)
+Information: There are 112 other cells with the same violation. (TEST-171)
+
+Pre-DFT violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 295
+
+-----------------------------------------------------------------
+
+295 PRE-DFT VIOLATIONS
+   153 Uncontrollable clock input of flip-flop violations (D1)
+    29 DFF set/reset line not controlled violations (D2)
+   113 DFF set/reset line not controlled violations (D3)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  153 out of 153 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      * 153 cells have test design rule violations
+
+Information: Test design rule checking completed. (TEST-123)
+  Warning: Test coverage estimation is not supported for pre-scan designs.
+  Information: '-coverage_estimation' option is ignored for this drc run.
+1

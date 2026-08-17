@@ -30,7 +30,7 @@ set_dft_signal -port [get_ports scan_clk] 	-type ScanClock 	-view spec 	-timing 
 
 
 # Reset signal
-set_dft_signal -port [get_ports scan_reset] 	-type Reset 	-view spec 	-active 1
+set_dft_signal -port [get_ports scan_reset] 	-type Reset 	-view spec 	-active 0
 
 
 # Test Mode signal 

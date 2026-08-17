@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP1 for linux64 -- Jul 19, 2018
-#@ # Date:   Mon Aug 17 17:04:05 2026
+#@ # Date:   Mon Aug 17 20:37:05 2026
 #@ # Run by: ICer@IC_EDA
 #@ 
 
@@ -6624,8 +6624,8 @@ source /home/synopsys/syn/O-2018.06-SP1/admin/setup/.synopsys_dc.setup
 
 #@ # -- End source /home/synopsys/syn/O-2018.06-SP1/admin/setup/.synopsys_dc.setup
 
-source ../script/syn.tcl
-#@ # -- Starting source ../script/syn.tcl
+source ../script/dft.tcl
+#@ # -- Starting source ../script/dft.tcl
 
 #@ #######################################################################
 #@ #		ASIC PHYSICAL DESIGN AUTOMATION SCRIPT 		      #
@@ -6638,7 +6638,7 @@ source ../script/syn.tcl
 #@ # Purpose	: Translate RTL to logic gates and initial met setup time by ideal clock.
 #@ # Usage		: dc_shell -f script/syn.tcl -output_log log/syn.log
 #@ # Prerequisites	: RTL clean and syntheizable
-#@ # Creation Date	: 2026-08-15
+#@ # Creation Date	: 2026-08-17
 #@ # Educational 	: ITI_summer_camp_2026_R3
 #@ #######################################################################
 #@ 
@@ -6648,8 +6648,9 @@ source ../script/syn.tcl
 #@ #######################################################################
 #@ 
 #@ # Defining General Variables
-#@ set worst_case         "saed90nm_max_hvt.db"
-#@ set corner             "worst"
+#@ set best_case 		"saed90nm_min_lvt.db"		
+#@ set worst_case 		"saed90nm_max_hvt.db"
+#@ set corner     		"worst"
 #@ 
 #@ 
 #@ # Tool Variables
@@ -6676,108 +6677,117 @@ source ../script/syn.tcl
 #@ # SVF file, important for Formal Verification
 #@ set_svf ${design}.svf
 #@ 
-#@ 
-#@ 
 #@ #######################################################################
-#@ # --------------- Analyze RTL ------------- #
+#@ # --------------- Read Netlist ------------- #
 #@ #######################################################################
 #@ 
-#@ # Check syntax errors and generate intermediate files
-#@ analyze -library work -format verilog [glob ../rtl/*.v]
-#@ 
-#@ 
-#@ #######################################################################
-#@ # --------------- Elaborate ------------- #
-#@ #######################################################################
-#@ 
-#@ # Translate from RTL to getech netlist and check linting and design issues
-#@ elaborate $design -lib work
-#@ 
-#@ # Make Top Level Design 
+#@ # Reading DDC netlist (binary format) and set current design
+#@ read_ddc ../../syn/results/$corner/outputs/${design}.ddc
 #@ current_design $design
 #@ 
-#@ # Debug warnings through elaborate
-#@ check_design
-#@ 
 #@ #######################################################################
-#@ # --------------- Constraints ------------- #
-#@ #######################################################################
-#@ source -e -v ../cons/cons.tcl
-#@ # -- Starting source ../cons/cons.tcl
-
-#@ 
-#@ #######################################################################
-#@ # --------------- Clock Definitions ------------- #
+#@ # --------------- Read SDC ------------- #
 #@ #######################################################################
 #@ 
-#@ set CLK_PERIOD 8.0
-#@ set CLK_UNCR_setup [expr $CLK_PERIOD * 0.03]
-#@ set CLK_UNCR_hold [expr $CLK_PERIOD * 0.02]
+#@ # Reading design constraints file (output from synthesis)
+#@ read_sdc ../../syn/results/$corner/outputs/${design}.sdc
+#@ current_design $design
 #@ 
-#@ create_clock -name wb_clk_i -period $CLK_PERIOD -waveform [list 0.0 [expr {$CLK_PERIOD / 2.0}]] [get_ports wb_clk_i]
-#@ 
-#@ set_clock_uncertainty -setup $CLK_UNCR_setup [get_port wb_clk_i]
-#@ set_clock_uncertainty -hold $CLK_UNCR_hold [get_port wb_clk_i]
-#@ 
-#@ set_input_delay -clock wb_clk_i -max [expr $CLK_PERIOD * 0.2] [remove_from_collection [all_inputs] [get_ports wb_clk_i wb_rst_i]]
-#@ #set_input_delay -clock wb_clk_i -min [expr $CLK_PERIOD * 0.1] [remove_from_collection [all_inputs] [get_ports wb_clk_i wb_rst_i]]
-#@ 
-#@ set_output_delay -clock wb_clk_i -max [expr $CLK_PERIOD * 0.2] [all_outputs]
-#@ #set_output_delay -clock wb_clk_i -min [expr $CLK_PERIOD * 0.1] [all_outputs]
-#@ 
-#@ # Prevent the tool from inserting beffuers through clock network
-#@ set_ideal_network [get_clocks wb_clk_i]
-#@ set_ideal_network [get_port wb_rst_i]
-#@ set_ideal_network [get_port dft_clk_i]
-#@ set_ideal_network [get_port dft_rst_i]
-#@ 
-#@ 
-#@ #######################################################################
-#@ # --------------- Optimization ------------- #
-#@ #######################################################################
-#@ 
-#@ # set_max_area 0.0
-#@ 
-#@ current_design i2c_master_top
-#@ 
-#@ 
-#@ # both values are determined from .lib file so that it's an intermediate value to force the tool to do optimization and minimize the propagation delay
-#@ set_max_transition 0.5 [current_design]
-#@ set_max_capacitance 101 [current_design]
-#@ 
-#@ # enhance in fanout
-#@ set_max_fanout 5 [current_design]
-#@ 
-#@ #######################################################################
-#@ # --------------- Interface ------------- #
-#@ #######################################################################
-#@ 
-#@ set_driving_cell  -lib_cell NBUFFX2_HVT -pin Z [all_inputs]
-#@ 
-#@ set_load 100 [all_outputs]
-#@ 
-#@ #####################################################################
-#@ # --------------- Don't use ------------- #
-#@ #######################################################################
-#@ set_dont_use [get_lib_cells */*AND3*]
-#@ 
-#@ # -- End source ../cons/cons.tcl
-
 #@ 
 #@ 
 #@ #######################################################################
 #@ # --------------- Compile ------------- #
 #@ #######################################################################
 #@ 
-#@ set_critical_range 1.00 $design; # used to report the critical paths within the critical range specified
+#@ # Solve problem related to feedthrough, constant shared, outputs drive same net
+#@ set_fix_multiple_port_nets -all -buffer_constants
 #@ 
-#@ # map all RTL MUXs to MUX cell instead of (AOI) cells to reduce congestion
-#@ set compile_prefer_mux true
-#@ set hdlin_infer_mux all
+#@ # Optimizing addition, sub, multiplication blocks for speed 
+#@ set_dp_smartgen_options -optimize_for speed
 #@ 
-#@ # Mapping and Optimization 
-#@ compile -map_effort high -incremental_mapping
-#@ compile -map_effort high -incremental_mapping
+#@ set_critical_range 1.0 $design; # used to report the critical paths within the critical range specified
+#@ 
+#@ # Scan Replacement and DFT insertion
+#@ compile -scan -map_effort high -incremental_mapping
+#@ compile -scan -map_effort high -incremental_mapping
+#@ 
+#@ #######################################################################
+#@ # --------------- Source DFT Constraints ------------- #
+#@ #######################################################################
+#@ source -e -v ../cons/cons.tcl
+#@ # -- Starting source ../cons/cons.tcl
+
+#@ 
+#@ #######################################################################
+#@ # --------------- Scan Configuration ------------- #
+#@ #######################################################################
+#@ 
+#@ set_scan_configuration -style multiplexed_flip_flop 				-replace true 						-clock_mixing no_mix 					-chain_count 1
+#@ 
+#@ 
+#@ #######################################################################
+#@ # --------------- Port Configuration ------------- #
+#@ #######################################################################
+#@ # Creation of ports that doesn't exist in netlist or rtl files
+#@ create_port -direction in Scan_Data_In
+#@ create_port -direction out Scan_Data_Out
+#@ create_port -direction in Scan_En
+#@ create_port -direction in scan_clk
+#@ create_port -direction in scan_reset
+#@ 
+#@ set_ideal_network [get_ports Scan_En]
+#@ set_ideal_network [get_ports scan_clk]
+#@ set_ideal_network [get_ports scan_reset]
+#@ 
+#@ set_case_analysis 1 [get_ports test_mode]
+#@ 
+#@ # Clock Signal
+#@ set_dft_signal -port [get_ports scan_clk] 	-type ScanClock 	-view spec 	-timing {45 55}
+#@ 
+#@ 
+#@ # Reset signal
+#@ set_dft_signal -port [get_ports scan_reset] 	-type Reset 	-view spec 	-active 1
+#@ 
+#@ 
+#@ # Test Mode signal 
+#@ set_dft_signal -port [get_ports test_mode] 	-type Constant 	-view existing_dft 	-active 1
+#@ set_dft_signal -port [get_ports test_mode] 	-type TestMode 	-view spec 	-active 1
+#@ 
+#@ # Scan data signals
+#@ set_dft_signal -port [get_ports Scan_Data_In] 	-type ScanDataIn 	-view spec
+#@ set_dft_signal -port [get_ports Scan_Data_Out] 	-type ScanDataOut 	-view spec
+#@ 
+#@ # Scan Enable
+#@ set_dft_signal -port [get_ports Scan_En] 	-type ScanEnable 	-view spec 	-active 1 	-usage scan
+#@ 
+#@ # -- End source ../cons/cons.tcl
+
+#@ 
+#@ 
+#@ #######################################################################
+#@ # --------------- Test Protocol ------------- #
+#@ #######################################################################
+#@ 
+#@ create_test_protocol
+#@ 
+#@ #######################################################################
+#@ # --------------- Scan Stitching & Checks ------------- #
+#@ #######################################################################
+#@ 
+#@ # Checking DRCs
+#@ dft_drc
+#@ 
+#@ # DFT stitching
+#@ insert_dft
+#@ 
+#@ # checking drc after stitching and showing the dft coverage percentage
+#@ dft_drc -coverage_estimate
+#@ 
+#@ # showing design scan chains
+#@ preview_dft
+#@ 
+#@ compile -scan -incremental_mapping;    # For more optimization
+#@ 
 #@ 
 #@ 
 #@ #######################################################################
@@ -6793,14 +6803,24 @@ source ../script/syn.tcl
 #@ #######################################################################
 #@ # --------------- Reports ------------- #
 #@ #######################################################################
-#@ report_clocks -attributes  						> ../results/$corner/reports/clocks.rpt
-#@ report_area -hierarchy 							> ../results/$corner/reports/synth_area.rpt
+#@ report_timing -delay_type max -max_path 2 				> ../results/$corner/reports/synth_timing_setup.rpt
+#@ report_timing -delay_type min -max_paths 2 				> ../results/$corner/reports/synth_timing_hold.rpt	
+#@ report_timing -delay_type max -slack_lesser_than 0 -max_paths 2 	> ../results/$corner/reports/synth_timing_setup_violated.rpt
+#@ report_timing -delay_type min -slack_lesser_than 0 -max_paths 2 	> ../results/$corner/reports/synth_timing_hold_violated.rpt
+#@ 
+#@ dft_drc -verbose 							> ../results/$corner/reports/drc.rpt
+#@ report_scan_path -chain all 						> ../results/$corner/reports/dft_violations.rpt
+#@ report_dft_signal -view existing_dft 					> ../results/$corner/reports/dft_existing.rpt
+#@ report_dft_signal -view spec 						> ../results/$corner/reports/dft_spec.rpt
+#@ dft_drc -coverage_estimate 						> ../results/$corner/reports/dft_drc_coverage.rpt
+#@ 
+#@ report_net_fanout -threshold 50 					> ../results/$corner/reports/dft_high_fanout.rpt
+#@ 
+#@ report_clocks 								> ../results/$corner/reports/clocks.rpt
+#@ report_area 								> ../results/$corner/reports/synth_area.rpt
 #@ report_cell 								> ../results/$corner/reports/synth_cells.rpt
 #@ report_qor 								> ../results/$corner/reports/synth_qor.rpt
-#@ report_power -hierarchy   						> ../results/$corner/reports/synth_power.rpt
-#@ report_timing -delay_type max -max_path 10 				> ../results/$corner/reports/synth_timing_setup.rpt
-#@ report_timing -delay_type max -slack_lesser_than 0 -max_paths 2 	> ../results/$corner/reports/synth_timing_setup_violated.rpt
-#@ report_timing -delay_type min -max_paths 10 				> ../results/$corner/reports/synth_timing_hold.rpt	
+#@ report_power  								> ../results/$corner/reports/synth_power.rpt
 #@ report_constraint -all_violators	 				> ../results/$corner/reports/synth_violations.rpt
 #@ 
 #@ 
@@ -6809,22 +6829,45 @@ source ../script/syn.tcl
 #@ #######################################################################
 #@ set verilogout_no_tri ture
 #@ set verilogout_equation false
-#@ change_names -rule verilog
+#@ #change_names -rule verilog
 #@ 
-#@ # Netlist
-#@ write -f ddc -hierarchy -output ../results/$corner/outputs/${design}.ddc
-#@ write -hierarchy -format verilog -output ../results/$corner/outputs/${design}.v
+#@ # Netlist and Verilog
+#@ write -format ddc -hierarchy -output ../results/$corner/outputs/${design}.ddc
+#@ write -format verilog -hierarchy -output ../results/$corner/outputs/${design}.v
 #@ 
-#@ # Another
-#@ write_sdf ../results/$corner/outputs/${design}.sdf; 	# standard delay format
+#@ # SDC file (Synopsys Design Constraints) >> for PNR Tool
 #@ write_sdc ../results/$corner/outputs/${design}.sdc;	# Synopsys design constraints
 #@ 
+#@ # SDF file (Standard Delay Format)
+#@ write_sdf ../results/$corner/outputs/${design}.sdf; 	# standard delay format
+#@ 
+#@ # Test Model (CTL file) >> For ATPG tool
+#@ write_test_model -output ../results/$corner/outputs/${design}.ctl
+#@ 
+#@ # SPF file (STIL Protocol File)
+#@ write_test_protocol -out ../results/$corner/outputs/${design}.spf
+#@ 
+#@ # def file (reorder scan chains placement step)
+#@ write_scan_def -output ../results/$corner/outputs/${design}.def
+#@ set_svf -off
 #@ 
 #@ 
 #@ 
 #@ 
 #@ 
 #@ 
-#@ # -- End source ../script/syn.tcl
+#@ 
+#@ 
+#@ 
+#@ 
+#@ 
+#@ 
+#@ 
+#@ 
+#@ 
+#@ 
+#@ 
+#@ 
+#@ 
+#@ # -- End source ../script/dft.tcl
 
-quit

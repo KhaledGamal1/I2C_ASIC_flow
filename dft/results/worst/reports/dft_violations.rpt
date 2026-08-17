@@ -1,0 +1,39 @@
+ 
+****************************************
+Report : Scan path
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon Aug 17 20:37:46 2026
+****************************************
+
+========================================
+TEST MODE: Internal_scan
+VIEW     : Specification
+========================================
+No scan path defined in this mode.
+
+ 
+****************************************
+Report : Scan path
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon Aug 17 20:37:46 2026
+****************************************
+
+========================================
+TEST MODE: Internal_scan
+VIEW     : Existing DFT
+========================================
+
+========================================
+AS SPECIFIED BY USER
+========================================
+
+
+========================================
+AS BUILT BY insert_dft
+========================================
+
+No scan path defined in this mode.
+
+0

@@ -1,0 +1,38 @@
+ 
+****************************************
+Report : net fanout
+        -threshold 50
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon Aug 17 20:37:48 2026
+****************************************
+
+
+Operating Conditions: WORST   Library: saed90nm_max_hvt
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+i2c_master_top         16000             saed90nm_max_hvt
+i2c_master_byte_ctrl   16000             saed90nm_max_hvt
+i2c_master_bit_ctrl    8000              saed90nm_max_hvt
+i2c_master_bit_ctrl_DW01_dec_0
+                       8000              saed90nm_max_hvt
+i2c_master_bit_ctrl_DW01_dec_1
+                       8000              saed90nm_max_hvt
+
+
+Attributes:
+   dr - drc disabled
+    c - annotated capacitance
+    d - dont_touch
+    i - ideal_net
+    I - ideal_network
+    p - includes pin load
+    r - annotated resistance
+    h - high fanout
+
+Net                 Fanout   Attributes   Capacitance   Driver
+--------------------------------------------------------------------------------
+n331                    53                   56.89      U339/ZN
+1

@@ -1,0 +1,33 @@
+ 
+****************************************
+Report : DFT signals
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon Aug 17 20:37:46 2026
+****************************************
+
+========================================
+TEST MODE: all_dft_user
+VIEW     : Existing DFT
+========================================
+Port               SignalType          Active    Hookup    Timing    Usage
+----------         ----------          ------    ------    ------    -----
+test_mode          Constant            1         -
+========================================
+TEST MODE: all_dft_protocol
+VIEW     : Existing DFT
+========================================
+Port               SignalType          Active    Hookup    Timing    Usage
+----------         ----------          ------    ------    ------    -----
+test_mode          Constant            1         -
+========================================
+TEST MODE: all_dft
+VIEW     : Existing DFT
+========================================
+Port               SignalType          Active    Hookup    Timing    Usage
+----------         ----------          ------    ------    ------    -----
+test_mode          Constant            1         -
+sda_pad_o          Constant            -         -
+scl_pad_o          Constant            -         -
+
+1

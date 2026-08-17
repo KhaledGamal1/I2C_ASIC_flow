@@ -1,0 +1,17 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -slack_lesser_than 0.00
+        -max_paths 2
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon Aug 17 20:37:45 2026
+****************************************
+
+Operating Conditions: WORST   Library: saed90nm_max_hvt
+Wire Load Model Mode: enclosed
+No paths.
+
+1

@@ -1,14 +1,14 @@
 ###################################################################
 
-# Created by write_sdc on Mon Aug 17 17:04:33 2026
+# Created by write_sdc on Mon Aug 17 20:37:49 2026
 
 ###################################################################
 set sdc_version 2.1
 
 set_units -time ns -resistance MOhm -capacitance fF -voltage V -current uA
-set_max_fanout 5 [current_design]
-set_max_capacitance 101 [current_design]
 set_max_transition 0.5 [current_design]
+set_max_capacitance 101 [current_design]
+set_max_fanout 5 [current_design]
 set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports wb_clk_i]
 set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports wb_rst_i]
 set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports test_mode]
@@ -47,10 +47,14 @@ set_load -pin_load 100 [get_ports scl_pad_o]
 set_load -pin_load 100 [get_ports scl_padoen_o]
 set_load -pin_load 100 [get_ports sda_pad_o]
 set_load -pin_load 100 [get_ports sda_padoen_o]
+set_case_analysis 1 [get_ports test_mode]
 set_ideal_network [get_ports wb_clk_i]
 set_ideal_network [get_ports wb_rst_i]
 set_ideal_network [get_ports dft_clk_i]
 set_ideal_network [get_ports dft_rst_i]
+set_ideal_network [get_ports Scan_En]
+set_ideal_network [get_ports scan_clk]
+set_ideal_network [get_ports scan_reset]
 create_clock [get_ports wb_clk_i]  -period 8  -waveform {0 4}
 set_output_delay -clock wb_clk_i  -max 1.6  [get_ports {wb_dat_o[7]}]
 set_output_delay -clock wb_clk_i  -max 1.6  [get_ports {wb_dat_o[6]}]
