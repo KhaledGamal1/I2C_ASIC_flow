@@ -35,8 +35,13 @@ current_design i2c_master_top
 
 
 # both values are determined from .lib file so that it's an intermediate value to force the tool to do optimization and minimize the propagation delay
-set_max_transition 0.5 [current_design]
+set_max_transition 0.51 [current_design]
 set_max_capacitance 101 [current_design]
+
+#set_min_capacitance 5 [current_design]
+
+#remove_attribute [get_nets {N55 N95}] dont_touch
+
 
 # enhance in fanout
 set_max_fanout 5 [current_design]

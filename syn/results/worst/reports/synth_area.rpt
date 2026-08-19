@@ -3,31 +3,31 @@
 Report : area
 Design : i2c_master_top
 Version: O-2018.06-SP1
-Date   : Mon Aug 17 17:04:30 2026
+Date   : Wed Aug 19 05:10:28 2026
 ****************************************
 
 Information: Updating design information... (UID-85)
 Library(s) Used:
 
-    saed90nm_max_hvt (File: /home/ICer/Downloads/Lib/synopsys/models/saed90nm_max_hvt.db)
+    saed90nm_max (File: /home/ICer/Downloads/Lib/synopsys/models/saed90nm_max.db)
 
 Number of ports:                          188
-Number of nets:                          1134
-Number of cells:                          918
-Number of combinational cells:            756
+Number of nets:                          1035
+Number of cells:                          816
+Number of combinational cells:            654
 Number of sequential cells:               158
 Number of macros/black boxes:               0
-Number of buf/inv:                        317
-Number of references:                      25
+Number of buf/inv:                        251
+Number of references:                      21
 
-Combinational area:               7026.278450
-Buf/Inv area:                     2971.238451
-Noncombinational area:            4854.988871
+Combinational area:               5676.134409
+Buf/Inv area:                     1887.436816
+Noncombinational area:            4827.340860
 Macro/Black Box area:                0.000000
-Net Interconnect area:             530.061047
+Net Interconnect area:             493.986322
 
-Total cell area:                 11881.267320
-Total area:                      12411.328368
+Total cell area:                 10503.475269
+Total area:                      10997.461592
 
 Hierarchical area distribution
 ------------------------------
@@ -37,14 +37,14 @@ Hierarchical area distribution
 Hierarchical cell                 Absolute    Percent  Combi-     Noncombi-  Black-
                                   Total       Total    national   national   boxes   Design
 --------------------------------  ----------  -------  ---------  ---------  ------  ------------------------------
-i2c_master_top                    11881.2673    100.0  2115.0720  1664.4096  0.0000  i2c_master_top
-byte_controller                    8101.7857     68.2  1183.3344   811.9296  0.0000  i2c_master_byte_ctrl
-byte_controller/bit_controller     6106.5217     51.4  2668.0320  2378.6496  0.0000  i2c_master_bit_ctrl
+i2c_master_top                    10503.4753    100.0  1816.4736  1660.7232  0.0000  i2c_master_top
+byte_controller                    7026.2784     66.9   900.4032   806.4000  0.0000  i2c_master_byte_ctrl
+byte_controller/bit_controller     5319.4752     50.6  1880.0640  2360.2176  0.0000  i2c_master_bit_ctrl
 byte_controller/bit_controller/sub_228
-                                    587.9808      4.9   587.9808     0.0000  0.0000  i2c_master_bit_ctrl_DW01_dec_1
+                                    599.9616      5.7   599.9616     0.0000  0.0000  i2c_master_bit_ctrl_DW01_dec_1
 byte_controller/bit_controller/sub_260
-                                    471.8592      4.0   471.8592     0.0000  0.0000  i2c_master_bit_ctrl_DW01_dec_0
+                                    479.2320      4.6   479.2320     0.0000  0.0000  i2c_master_bit_ctrl_DW01_dec_0
 --------------------------------  ----------  -------  ---------  ---------  ------  ------------------------------
-Total                                                  7026.2784  4854.9889  0.0000
+Total                                                  5676.1344  4827.3409  0.0000
 
 1

@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Mon Aug 17 17:04:33 2026
+# Created by write_sdc on Wed Aug 19 05:10:30 2026
 
 ###################################################################
 set sdc_version 2.1
@@ -8,31 +8,7 @@ set sdc_version 2.1
 set_units -time ns -resistance MOhm -capacitance fF -voltage V -current uA
 set_max_fanout 5 [current_design]
 set_max_capacitance 101 [current_design]
-set_max_transition 0.5 [current_design]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports wb_clk_i]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports wb_rst_i]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports test_mode]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports dft_clk_i]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports dft_rst_i]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports arst_i]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports {wb_adr_i[2]}]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports {wb_adr_i[1]}]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports {wb_adr_i[0]}]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports {wb_dat_i[7]}]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports {wb_dat_i[6]}]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports {wb_dat_i[5]}]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports {wb_dat_i[4]}]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports {wb_dat_i[3]}]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports {wb_dat_i[2]}]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports {wb_dat_i[1]}]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports {wb_dat_i[0]}]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports wb_we_i]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports wb_stb_i]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports wb_cyc_i]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports scl_pad_i]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports sda_pad_i]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports VDD]
-set_driving_cell -lib_cell NBUFFX2_HVT -pin Z [get_ports VSS]
+set_max_transition 0.51 [current_design]
 set_load -pin_load 100 [get_ports {wb_dat_o[7]}]
 set_load -pin_load 100 [get_ports {wb_dat_o[6]}]
 set_load -pin_load 100 [get_ports {wb_dat_o[5]}]

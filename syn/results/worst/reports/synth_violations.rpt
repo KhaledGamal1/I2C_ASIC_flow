@@ -4,39 +4,19 @@ Report : constraint
         -all_violators
 Design : i2c_master_top
 Version: O-2018.06-SP1
-Date   : Mon Aug 17 17:04:32 2026
+Date   : Wed Aug 19 05:10:29 2026
 ****************************************
 
 
-   max_delay/setup ('wb_clk_i' group)
+   min_capacitance
 
                              Required        Actual
-   Endpoint                 Path Delay     Path Delay        Slack
+   Net                      Capacitance    Capacitance       Slack
    -----------------------------------------------------------------
-   byte_controller/bit_controller/cnt_reg[5]/D
-                                6.87           6.97 r        -0.10  (VIOLATED)
-   byte_controller/bit_controller/cnt_reg[4]/D
-                                6.87           6.97 r        -0.10  (VIOLATED)
-   byte_controller/bit_controller/cnt_reg[8]/D
-                                6.87           6.97 r        -0.10  (VIOLATED)
-   byte_controller/bit_controller/cnt_reg[11]/D
-                                6.87           6.97 r        -0.10  (VIOLATED)
-   byte_controller/bit_controller/cnt_reg[6]/D
-                                6.87           6.97 r        -0.10  (VIOLATED)
-   byte_controller/bit_controller/cnt_reg[7]/D
-                                6.87           6.97 r        -0.10  (VIOLATED)
-   byte_controller/bit_controller/cnt_reg[13]/D
-                                6.87           6.97 r        -0.10  (VIOLATED)
-   byte_controller/bit_controller/cnt_reg[15]/D
-                                6.87           6.97 r        -0.10  (VIOLATED)
-   byte_controller/bit_controller/cnt_reg[10]/D
-                                6.87           6.96 r        -0.09  (VIOLATED)
-   byte_controller/bit_controller/cnt_reg[1]/D
-                                6.87           6.96 r        -0.09  (VIOLATED)
-   byte_controller/bit_controller/cnt_reg[0]/D
-                                6.87           6.96 r        -0.09  (VIOLATED)
-   byte_controller/bit_controller/cnt_reg[9]/D
-                                6.87           6.96 r        -0.09  (VIOLATED)
+   N55 (dont_touch)             0.10           0.00          -0.10  (VIOLATED)
+   N95 (dont_touch)             0.10           0.00          -0.10  (VIOLATED)
 
+   -----------------------------------------------------------------
+   Total                      2                  -0.20  
 
 1
