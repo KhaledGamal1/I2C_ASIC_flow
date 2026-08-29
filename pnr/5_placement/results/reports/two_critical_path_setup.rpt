@@ -1,0 +1,167 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 2
+        -report_by design
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Sat Aug 29 11:21:30 2026
+****************************************
+
+  Startpoint: byte_controller/bit_controller/cnt_reg[1] (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/cnt_reg[14] (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                       0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  byte_controller/bit_controller/cnt_reg[1]/CLK (DFFARX1)
+                                                   0.00      0.00 r
+  byte_controller/bit_controller/cnt_reg[1]/Q (DFFARX1)
+                                                   0.72      0.72 f
+  byte_controller/bit_controller/sub_228/U28/Q (OR2X1)
+                                                   0.20      0.92 f
+  byte_controller/bit_controller/sub_228/U5/QN (NOR2X0)
+                                                   0.21      1.13 r
+  byte_controller/bit_controller/sub_228/U12/Q (AND2X1)
+                                                   0.32      1.45 r
+  byte_controller/bit_controller/sub_228/U60/ZN (INVX0)
+                                                   0.12      1.58 f
+  byte_controller/bit_controller/sub_228/U6/QN (NOR2X0)
+                                                   0.18      1.76 r
+  byte_controller/bit_controller/sub_228/U17/Q (AND2X1)
+                                                   0.29      2.05 r
+  byte_controller/bit_controller/sub_228/U56/ZN (INVX0)
+                                                   0.12      2.17 f
+  byte_controller/bit_controller/sub_228/U55/QN (NOR2X0)
+                                                   0.16      2.33 r
+  byte_controller/bit_controller/sub_228/U54/ZN (INVX0)
+                                                   0.17      2.49 f
+  byte_controller/bit_controller/sub_228/U53/QN (NOR2X0)
+                                                   0.12      2.61 r
+  byte_controller/bit_controller/sub_228/U52/ZN (INVX0)
+                                                   0.15      2.77 f
+  byte_controller/bit_controller/sub_228/U51/QN (NOR2X0)
+                                                   0.16      2.93 r
+  byte_controller/bit_controller/sub_228/U49/ZN (INVX0)
+                                                   0.16      3.09 f
+  byte_controller/bit_controller/sub_228/U48/QN (NOR2X0)
+                                                   0.15      3.24 r
+  byte_controller/bit_controller/sub_228/U47/ZN (INVX0)
+                                                   0.13      3.38 f
+  byte_controller/bit_controller/sub_228/U46/QN (NOR2X0)
+                                                   0.21      3.58 r
+  byte_controller/bit_controller/sub_228/U45/ZN (INVX0)
+                                                   0.19      3.77 f
+  byte_controller/bit_controller/sub_228/U44/QN (NOR2X0)
+                                                   0.18      3.94 r
+  byte_controller/bit_controller/sub_228/U43/ZN (INVX0)
+                                                   0.14      4.09 f
+  byte_controller/bit_controller/sub_228/U42/Q (XNOR2X1)
+                                                   0.40      4.49 r
+  byte_controller/bit_controller/U12/Q (AO222X1)   0.34      4.82 r
+  byte_controller/bit_controller/cnt_reg[14]/D (DFFARX1)
+                                                   0.00      4.82 r
+  data arrival time                                          4.82
+
+  clock wb_clk_i (rise edge)                       8.00      8.00
+  clock network delay (ideal)                      0.00      8.00
+  byte_controller/bit_controller/cnt_reg[14]/CLK (DFFARX1)
+                                                   0.00      8.00 r
+  clock uncertainty                               -0.24      7.76
+  library setup time                              -0.36      7.40
+  data required time                                         7.40
+  ------------------------------------------------------------------------
+  data required time                                         7.40
+  data arrival time                                         -4.82
+  ------------------------------------------------------------------------
+  slack (MET)                                                2.57
+
+
+
+  Startpoint: byte_controller/bit_controller/filter_cnt_reg[0] (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Endpoint: byte_controller/bit_controller/filter_cnt_reg[13] (rising edge-triggered flip-flop clocked by wb_clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: wb_clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock wb_clk_i (rise edge)                       0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  byte_controller/bit_controller/filter_cnt_reg[0]/CLK (DFFARX1)
+                                                   0.00      0.00 r
+  byte_controller/bit_controller/filter_cnt_reg[0]/Q (DFFARX1)
+                                                   0.71      0.71 f
+  byte_controller/bit_controller/sub_260/U50/QN (NOR2X0)
+                                                   0.19      0.91 r
+  byte_controller/bit_controller/sub_260/U49/ZN (INVX0)
+                                                   0.14      1.05 f
+  byte_controller/bit_controller/sub_260/U48/QN (NOR2X0)
+                                                   0.15      1.20 r
+  byte_controller/bit_controller/sub_260/U47/ZN (INVX0)
+                                                   0.18      1.38 f
+  byte_controller/bit_controller/sub_260/U46/QN (NOR2X0)
+                                                   0.23      1.61 r
+  byte_controller/bit_controller/sub_260/U2/Q (AND2X1)
+                                                   0.31      1.93 r
+  byte_controller/bit_controller/sub_260/U42/ZN (INVX0)
+                                                   0.11      2.04 f
+  byte_controller/bit_controller/sub_260/U41/QN (NOR2X0)
+                                                   0.12      2.15 r
+  byte_controller/bit_controller/sub_260/U40/ZN (INVX0)
+                                                   0.15      2.30 f
+  byte_controller/bit_controller/sub_260/U39/QN (NOR2X0)
+                                                   0.15      2.45 r
+  byte_controller/bit_controller/sub_260/U38/ZN (INVX0)
+                                                   0.16      2.61 f
+  byte_controller/bit_controller/sub_260/U37/QN (NOR2X0)
+                                                   0.16      2.77 r
+  byte_controller/bit_controller/sub_260/U36/ZN (INVX0)
+                                                   0.16      2.93 f
+  byte_controller/bit_controller/sub_260/U35/QN (NOR2X0)
+                                                   0.16      3.09 r
+  byte_controller/bit_controller/sub_260/U34/ZN (INVX0)
+                                                   0.16      3.24 f
+  byte_controller/bit_controller/sub_260/U33/QN (NOR2X0)
+                                                   0.18      3.42 r
+  byte_controller/bit_controller/sub_260/U32/ZN (INVX0)
+                                                   0.16      3.58 f
+  byte_controller/bit_controller/sub_260/U31/QN (NOR2X0)
+                                                   0.17      3.75 r
+  byte_controller/bit_controller/sub_260/U30/ZN (INVX0)
+                                                   0.17      3.92 f
+  byte_controller/bit_controller/sub_260/U29/QN (NOR2X0)
+                                                   0.17      4.09 r
+  byte_controller/bit_controller/sub_260/U28/Q (XOR2X1)
+                                                   0.31      4.39 r
+  byte_controller/bit_controller/U173/Q (AO22X1)   0.23      4.63 r
+  byte_controller/bit_controller/filter_cnt_reg[13]/D (DFFARX1)
+                                                   0.00      4.63 r
+  data arrival time                                          4.63
+
+  clock wb_clk_i (rise edge)                       8.00      8.00
+  clock network delay (ideal)                      0.00      8.00
+  byte_controller/bit_controller/filter_cnt_reg[13]/CLK (DFFARX1)
+                                                   0.00      8.00 r
+  clock uncertainty                               -0.24      7.76
+  library setup time                              -0.35      7.41
+  data required time                                         7.41
+  ------------------------------------------------------------------------
+  data required time                                         7.41
+  data arrival time                                         -4.63
+  ------------------------------------------------------------------------
+  slack (MET)                                                2.78
+
+
+1

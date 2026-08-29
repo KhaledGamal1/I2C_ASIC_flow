@@ -1,0 +1,9 @@
+Command check_pg_drc started  at Sat Aug 29 11:21:31 2026
+Command check_pg_drc finished at Sat Aug 29 11:21:31 2026
+CPU usage for check_pg_drc: 0.18 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 0.39 seconds ( 0.00 hours)
+Total number of errors found: 2
+   2 minimal metal area errors on M3
+------------
+Description of the errors can be seen in gui error set "DRC_report_by_check_pg_drc"
+------------

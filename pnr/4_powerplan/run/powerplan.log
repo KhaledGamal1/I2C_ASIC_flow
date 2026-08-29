@@ -1,0 +1,108 @@
+
+
+
+                              IC Compiler II (TM)
+
+             Version O-2018.06-SP1 for linux64 - Jul 17, 2018 -SLE
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+#######################################################################
+#		ASIC PHYSICAL DESIGN AUTOMATION SCRIPT 		      #
+#######################################################################
+# Author		: Khaled Gamal
+# Project		: I2C
+# Block/Top		: i2c_master_top
+# Technology		: saed90nm
+# EDA Tool		: Synopsys (ICC2)
+# Usage 		: icc2_shell -f script/powerplan.tcl -output_log log/powerplan.log
+# Prerequisites		: Floorplan created
+# Creation Date		: 2026-08-25
+# Educational 		: ITI_summer_camp_2026_R3
+#######################################################################
+#######################################################################
+# --------------- Variable setup ------------- #
+#######################################################################
+set design 	"i2c"
+i2c
+set std_worst 	"saed90nm_max.db"
+saed90nm_max.db
+set target_library $std_worst
+saed90nm_max.db
+set corner 	"worst"
+worst
+set top_level 	"i2c_master_top"
+i2c_master_top
+set project_dir "/mnt/hgfs/Shared_files/${design}"
+/mnt/hgfs/Shared_files/i2c
+set Lib_path    "/home/ICer/Downloads/Lib"
+/home/ICer/Downloads/Lib
+set dlib_path   "${project_dir}/pnr/2_design_lib/library"
+/mnt/hgfs/Shared_files/i2c/pnr/2_design_lib/library
+set prev_stage      "floorplan"
+floorplan
+set current_stage   "powerplan"
+powerplan
+#######################################################################
+# --------------- dlib setup ------------- #
+#######################################################################
+open_block  ${dlib_path}/${design}.dlib:${design}_${prev_stage}.design
+Information: User units loaded from library 'saed90nm_max' (LNK-040)
+Opening block 'i2c.dlib:i2c_floorplan.design' in edit mode
+{i2c.dlib:i2c_floorplan.design}
+# copying the (clean) block from the previous stage (dlib) to just preserve it and work on the new one which is the present stage (floorplan)
+#to make sure if any errors happened through the current stage, it will be easy to restore the previous stage
+copy_block -from_block ${design}.dlib:${design}_${prev_stage}.design -to_block ${design}_${current_stage}
+{i2c.dlib:i2c_powerplan.design}
+current_block ${design}_${current_stage}.design
+{i2c.dlib:i2c_powerplan.design}
+start_gui
+Begin building search trees for block i2c.dlib:i2c_powerplan.design
+Done building search trees for block i2c.dlib:i2c_powerplan.design (time 0s)
+#######################################################################
+# --------------- Initialization ------------- #
+#######################################################################
+remove_pg_via_master_rules 	-all
+Using libraries: i2c.dlib saed90nm_max saed90_ndm_physical_only
+Warning: In library i2c.dlib, no block views exist for block i2c_master_top. (LNK-064)
+Visiting block i2c.dlib:i2c_powerplan.design
+Design 'i2c_master_top' was successfully linked.
+No via def rule is found.
+remove_pg_patterns 		-all
+No pattern is found.
+remove_pg_strategies 		-all
+All strategies have been removed.
+remove_pg_strategy 		-all
+All strategy via rules have been removed.
+# Creation VDD and VSS nets for Network (already exist in i2c rtl)
+derive_pg_connection -power_net  {VDD} -ground_net  {VSS}                       -power_pin  {VDD} -ground_pin  {VSS}                       -create_port none
+Error: unknown command 'derive_pg_connection' (CMD-005)
+Information: script '/mnt/hgfs/Shared_files/i2c/pnr/4_powerplan/script/powerplan.tcl'
+	stopped at line 57 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"derive_pg_connection -power_net  {VDD} -ground_net  {VSS}                       -power_pin  {VDD} -ground_pin  {VSS}                       -create_por..."
+ -- End Extended Error Info
+icc2_shell> de
+Error: ambiguous command 'de' matched 23 commands:
+	(define_antenna_accumulation_mode, define_antenna_area_rule, define_antenna_layer_ratio_scale ...) (CMD-006)
+icc2_shell> 
+icc2_shell> 
+icc2_shell> 
+icc2_shell> 
+icc2_shell> 
+Information: Interrupting current command. (INT-2)
+
+icc2_shell> 
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+
+icc2_shell> 
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+Information: Process terminated by interrupt. (INT-4)

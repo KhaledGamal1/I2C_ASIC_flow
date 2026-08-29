@@ -1,0 +1,380 @@
+****************************************
+Report : cell
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Sat Aug 29 11:21:30 2026
+****************************************
+
+Attributes
+    b - black-box (unknown)
+    h - hierarchical
+    n - noncombinational
+    u - contains unmapped logic
+    E - extracted timing model
+    Q - Quick timing model
+    U - Unbound (missing)
+    s - user size_only
+    S - implicit size_only
+    d - user dont_touch
+    D - derived dont_touch
+    o - synthetic operator
+
+
+Cell                      Reference       Library          Attributes
+--------------------------------------------------------------------------------
+C21                       AND2X1          saed90nm_max     
+C24                       OR2X1           saed90nm_max     
+C28                       OR2X1           saed90nm_max     
+C37                       OR2X1           saed90nm_max     
+C47                       OR2X1           saed90nm_max     
+C499                      OR2X1           saed90nm_max     
+C500                      OR2X1           saed90nm_max     
+C529                      AND2X1          saed90nm_max     
+C530                      AND2X1          saed90nm_max     
+C531                      AND2X1          saed90nm_max     
+C570                      AND2X1          saed90nm_max     
+C572                      OR2X1           saed90nm_max     
+C580                      OR2X1           saed90nm_max     
+C581                      AND2X1          saed90nm_max     
+C583                      OR2X1           saed90nm_max     
+C584                      AND2X1          saed90nm_max     
+C585                      OR2X1           saed90nm_max     
+C586                      OR2X1           saed90nm_max     
+C592                      AND2X1          saed90nm_max     
+I_0                       INVX0           saed90nm_max     
+I_1                       INVX0           saed90nm_max     
+I_10                      INVX1           saed90nm_max     
+I_11                      INVX1           saed90nm_max     
+I_14                      INVX0           saed90nm_max     
+I_15                      INVX0           saed90nm_max     
+I_6                       INVX1           saed90nm_max     
+I_7                       INVX1           saed90nm_max     
+I_8                       INVX0           saed90nm_max     
+I_9                       INVX0           saed90nm_max     
+PLACE_HFSBUF_1041_55      NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_1120_47      NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_1301_26      NBUFFX8         saed90nm_max     
+PLACE_HFSBUF_1337_48      NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_1480_7       NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_1572_5       NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_1627_6       NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_1710_8       NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_2010_13      NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_2064_11      NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_2129_12      NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_2159_49      NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_75_46        NBUFFX2         saed90nm_max     
+PLACE_HFSBUF_764_16       NBUFFX2         saed90nm_max     
+PLACE_HFSINV_220_59       INVX0           saed90nm_max     
+PLACE_HFSINV_3372_51      INVX2           saed90nm_max     
+PLACE_HFSINV_430_41       INVX0           saed90nm_max     
+PLACE_optlc_100           TIEL            saed90nm_max     
+PLACE_optlc_101           TIEL            saed90nm_max     
+PLACE_optlc_102           TIEL            saed90nm_max     
+PLACE_optlc_103           TIEL            saed90nm_max     
+PLACE_optlc_104           TIEL            saed90nm_max     
+PLACE_optlc_105           TIEL            saed90nm_max     
+PLACE_optlc_106           TIEL            saed90nm_max     
+PLACE_optlc_107           TIEL            saed90nm_max     
+PLACE_optlc_108           TIEL            saed90nm_max     
+PLACE_optlc_109           TIEL            saed90nm_max     
+PLACE_optlc_110           TIEL            saed90nm_max     
+PLACE_optlc_111           TIEL            saed90nm_max     
+PLACE_optlc_112           TIEL            saed90nm_max     
+PLACE_optlc_113           TIEL            saed90nm_max     
+PLACE_optlc_114           TIEL            saed90nm_max     
+PLACE_optlc_115           TIEL            saed90nm_max     
+PLACE_optlc_116           TIEL            saed90nm_max     
+PLACE_optlc_117           TIEL            saed90nm_max     
+PLACE_optlc_118           TIEL            saed90nm_max     
+PLACE_optlc_119           TIEL            saed90nm_max     
+PLACE_optlc_120           TIEL            saed90nm_max     
+PLACE_optlc_121           TIEL            saed90nm_max     
+PLACE_optlc_122           TIEL            saed90nm_max     
+PLACE_optlc_123           TIEL            saed90nm_max     
+PLACE_optlc_124           TIEL            saed90nm_max     
+PLACE_optlc_125           TIEL            saed90nm_max     
+PLACE_optlc_126           TIEL            saed90nm_max     
+PLACE_optlc_127           TIEL            saed90nm_max     
+PLACE_optlc_128           TIEL            saed90nm_max     
+PLACE_optlc_129           TIEL            saed90nm_max     
+PLACE_optlc_130           TIEL            saed90nm_max     
+PLACE_optlc_131           TIEL            saed90nm_max     
+PLACE_optlc_132           TIEL            saed90nm_max     
+PLACE_optlc_133           TIEL            saed90nm_max     
+PLACE_optlc_134           TIEL            saed90nm_max     
+PLACE_optlc_135           TIEL            saed90nm_max     
+PLACE_optlc_136           TIEL            saed90nm_max     
+PLACE_optlc_137           TIEL            saed90nm_max     
+PLACE_optlc_138           TIEL            saed90nm_max     
+PLACE_optlc_139           TIEL            saed90nm_max     
+PLACE_optlc_140           TIEL            saed90nm_max     
+PLACE_optlc_141           TIEL            saed90nm_max     
+PLACE_optlc_142           TIEL            saed90nm_max     
+PLACE_optlc_66            TIEL            saed90nm_max     
+PLACE_optlc_67            TIEL            saed90nm_max     
+PLACE_optlc_69            TIEL            saed90nm_max     
+PLACE_optlc_70            TIEL            saed90nm_max     
+PLACE_optlc_71            TIEL            saed90nm_max     
+PLACE_optlc_72            TIEL            saed90nm_max     
+PLACE_optlc_73            TIEL            saed90nm_max     
+PLACE_optlc_74            TIEL            saed90nm_max     
+PLACE_optlc_75            TIEL            saed90nm_max     
+PLACE_optlc_76            TIEL            saed90nm_max     
+PLACE_optlc_77            TIEL            saed90nm_max     
+PLACE_optlc_78            TIEL            saed90nm_max     
+PLACE_optlc_79            TIEL            saed90nm_max     
+PLACE_optlc_80            TIEL            saed90nm_max     
+PLACE_optlc_81            TIEL            saed90nm_max     
+PLACE_optlc_82            TIEL            saed90nm_max     
+PLACE_optlc_83            TIEL            saed90nm_max     
+PLACE_optlc_84            TIEL            saed90nm_max     
+PLACE_optlc_85            TIEL            saed90nm_max     
+PLACE_optlc_86            TIEL            saed90nm_max     
+PLACE_optlc_87            TIEL            saed90nm_max     
+PLACE_optlc_88            TIEL            saed90nm_max     
+PLACE_optlc_89            TIEL            saed90nm_max     
+PLACE_optlc_90            TIEL            saed90nm_max     
+PLACE_optlc_91            TIEL            saed90nm_max     
+PLACE_optlc_92            TIEL            saed90nm_max     
+PLACE_optlc_93            TIEL            saed90nm_max     
+PLACE_optlc_94            TIEL            saed90nm_max     
+PLACE_optlc_95            TIEL            saed90nm_max     
+PLACE_optlc_96            TIEL            saed90nm_max     
+PLACE_optlc_97            TIEL            saed90nm_max     
+PLACE_optlc_98            TIEL            saed90nm_max     
+PLACE_optlc_99            TIEL            saed90nm_max     
+SpareCell_0               NAND2X1         saed90nm_max     d
+SpareCell_0_0             INVX1           saed90nm_max     d
+SpareCell_0_1             INVX1           saed90nm_max     d
+SpareCell_0_2             INVX1           saed90nm_max     d
+SpareCell_0_3             INVX1           saed90nm_max     d
+SpareCell_1               NAND2X1         saed90nm_max     d
+SpareCell_10              NAND2X1         saed90nm_max     d
+SpareCell_11              NAND2X1         saed90nm_max     d
+SpareCell_12              NAND2X1         saed90nm_max     d
+SpareCell_13              NAND2X1         saed90nm_max     d
+SpareCell_14              NAND2X1         saed90nm_max     d
+SpareCell_15              NAND2X1         saed90nm_max     d
+SpareCell_16              NAND2X1         saed90nm_max     d
+SpareCell_17              NAND2X1         saed90nm_max     d
+SpareCell_18              NAND2X1         saed90nm_max     d
+SpareCell_19              NAND2X1         saed90nm_max     d
+SpareCell_1_0             MUX21X1         saed90nm_max     d
+SpareCell_1_1             MUX21X1         saed90nm_max     d
+SpareCell_1_2             MUX21X1         saed90nm_max     d
+SpareCell_1_3             MUX21X1         saed90nm_max     d
+SpareCell_2               NAND2X1         saed90nm_max     d
+SpareCell_2_0             OR2X1           saed90nm_max     d
+SpareCell_2_1             OR2X1           saed90nm_max     d
+SpareCell_2_2             OR2X1           saed90nm_max     d
+SpareCell_3               NAND2X1         saed90nm_max     d
+SpareCell_3_0             SDFFX1          saed90nm_max     n, d
+SpareCell_3_1             SDFFX1          saed90nm_max     n, d
+SpareCell_3_2             SDFFX1          saed90nm_max     n, d
+SpareCell_4               NAND2X1         saed90nm_max     d
+SpareCell_5               NAND2X1         saed90nm_max     d
+SpareCell_6               NAND2X1         saed90nm_max     d
+SpareCell_7               NAND2X1         saed90nm_max     d
+SpareCell_8               NAND2X1         saed90nm_max     d
+SpareCell_9               NAND2X1         saed90nm_max     d
+U10                       INVX0           saed90nm_max     
+U100                      MUX21X1         saed90nm_max     
+U101                      MUX21X1         saed90nm_max     
+U102                      MUX21X1         saed90nm_max     
+U103                      MUX21X1         saed90nm_max     
+U104                      MUX21X1         saed90nm_max     
+U105                      MUX21X1         saed90nm_max     
+U106                      MUX21X1         saed90nm_max     
+U107                      MUX21X1         saed90nm_max     
+U108                      MUX21X1         saed90nm_max     
+U109                      MUX21X1         saed90nm_max     
+U11                       INVX0           saed90nm_max     
+U110                      MUX21X1         saed90nm_max     
+U111                      MUX21X1         saed90nm_max     
+U112                      MUX21X1         saed90nm_max     
+U113                      MUX21X1         saed90nm_max     
+U114                      MUX21X1         saed90nm_max     
+U115                      MUX21X1         saed90nm_max     
+U116                      MUX21X1         saed90nm_max     
+U117                      MUX21X1         saed90nm_max     
+U118                      MUX21X1         saed90nm_max     
+U119                      MUX21X1         saed90nm_max     
+U12                       INVX0           saed90nm_max     
+U120                      MUX21X1         saed90nm_max     
+U121                      MUX21X1         saed90nm_max     
+U122                      MUX21X1         saed90nm_max     
+U123                      MUX21X1         saed90nm_max     
+U124                      MUX21X1         saed90nm_max     
+U125                      MUX21X1         saed90nm_max     
+U126                      MUX21X1         saed90nm_max     
+U127                      MUX21X1         saed90nm_max     
+U128                      MUX21X1         saed90nm_max     
+U129                      MUX21X1         saed90nm_max     
+U13                       AO21X1          saed90nm_max     
+U130                      MUX21X1         saed90nm_max     
+U131                      MUX21X1         saed90nm_max     
+U132                      MUX21X1         saed90nm_max     
+U133                      MUX21X1         saed90nm_max     
+U134                      MUX21X1         saed90nm_max     
+U135                      MUX21X1         saed90nm_max     
+U136                      MUX21X1         saed90nm_max     
+U137                      MUX21X1         saed90nm_max     
+U138                      MUX21X1         saed90nm_max     
+U139                      MUX21X1         saed90nm_max     
+U14                       AO21X1          saed90nm_max     
+U15                       INVX0           saed90nm_max     
+U159                      AND2X1          saed90nm_max     
+U16                       NAND2X0         saed90nm_max     
+U163                      NOR2X2          saed90nm_max     
+U165                      INVX0           saed90nm_max     
+U166                      INVX0           saed90nm_max     
+U167                      INVX0           saed90nm_max     
+U17                       NAND2X0         saed90nm_max     
+U176                      NAND2X0         saed90nm_max     
+U177                      NAND2X0         saed90nm_max     
+U178                      OR3X1           saed90nm_max     
+U179                      NAND2X0         saed90nm_max     
+U18                       NAND2X0         saed90nm_max     
+U180                      NAND2X0         saed90nm_max     
+U181                      OR3X1           saed90nm_max     
+U182                      INVX4           saed90nm_max     
+U188                      MUX21X2         saed90nm_max     
+U189                      MUX21X1         saed90nm_max     S
+U19                       NAND2X0         saed90nm_max     
+U20                       NAND2X0         saed90nm_max     
+U21                       NAND2X0         saed90nm_max     
+U22                       NAND2X0         saed90nm_max     
+U23                       NAND2X0         saed90nm_max     
+U26                       NAND2X0         saed90nm_max     
+U27                       NAND2X0         saed90nm_max     
+U28                       NAND2X0         saed90nm_max     
+U29                       NAND2X0         saed90nm_max     
+U3                        NAND2X0         saed90nm_max     
+U30                       NAND2X0         saed90nm_max     
+U31                       NAND2X0         saed90nm_max     
+U32                       NAND2X0         saed90nm_max     
+U33                       NAND2X0         saed90nm_max     
+U34                       NAND2X0         saed90nm_max     
+U36                       NAND2X0         saed90nm_max     
+U39                       NAND2X0         saed90nm_max     
+U40                       NAND2X0         saed90nm_max     
+U42                       OR2X1           saed90nm_max     
+U43                       AO222X1         saed90nm_max     
+U44                       AO221X1         saed90nm_max     
+U45                       AO22X1          saed90nm_max     
+U46                       OR2X1           saed90nm_max     
+U47                       AO222X1         saed90nm_max     
+U48                       AO221X1         saed90nm_max     
+U49                       AO22X1          saed90nm_max     
+U5                        INVX0           saed90nm_max     
+U50                       OR2X1           saed90nm_max     
+U51                       AO222X1         saed90nm_max     
+U52                       AO221X1         saed90nm_max     
+U53                       AO22X1          saed90nm_max     
+U54                       OR2X1           saed90nm_max     
+U55                       AO222X1         saed90nm_max     
+U56                       AO222X1         saed90nm_max     
+U57                       OR2X1           saed90nm_max     
+U58                       AO222X1         saed90nm_max     
+U59                       AO222X1         saed90nm_max     
+U6                        INVX0           saed90nm_max     
+U60                       OR2X1           saed90nm_max     
+U61                       AO222X1         saed90nm_max     
+U62                       AO222X1         saed90nm_max     
+U63                       OR2X1           saed90nm_max     
+U64                       AO222X1         saed90nm_max     
+U65                       AO221X1         saed90nm_max     
+U66                       AO22X1          saed90nm_max     
+U67                       OR2X1           saed90nm_max     
+U68                       AO222X1         saed90nm_max     
+U69                       AO221X1         saed90nm_max     
+U7                        INVX0           saed90nm_max     
+U70                       AO22X1          saed90nm_max     
+U71                       AND2X1          saed90nm_max     
+U72                       OR2X1           saed90nm_max     
+U73                       NAND2X0         saed90nm_max     
+U74                       NAND2X0         saed90nm_max     
+U75                       INVX0           saed90nm_max     
+U76                       NAND2X0         saed90nm_max     
+U77                       NAND2X0         saed90nm_max     
+U78                       INVX0           saed90nm_max     
+U79                       OR2X1           saed90nm_max     
+U8                        INVX0           saed90nm_max     
+U81                       AND2X1          saed90nm_max     
+U82                       AND2X1          saed90nm_max     
+U83                       AND2X1          saed90nm_max     
+U84                       AND2X1          saed90nm_max     
+U85                       AND2X1          saed90nm_max     
+U87                       AND2X1          saed90nm_max     
+U88                       AND2X1          saed90nm_max     
+U89                       AND2X1          saed90nm_max     
+U9                        INVX0           saed90nm_max     
+U90                       AND2X1          saed90nm_max     
+U91                       AO21X1          saed90nm_max     
+U92                       AND2X1          saed90nm_max     
+U93                       AND2X1          saed90nm_max     
+U94                       AND2X1          saed90nm_max     
+U95                       AND2X1          saed90nm_max     
+U96                       OR2X1           saed90nm_max     
+U97                       AO21X1          saed90nm_max     
+U99                       INVX0           saed90nm_max     
+al_reg                    DFFARX1         saed90nm_max     n
+byte_controller           i2c_master_byte_ctrl             h
+cr_reg_0_                 DFFARX1         saed90nm_max     n
+cr_reg_1_                 DFFARX1         saed90nm_max     n
+cr_reg_2_                 DFFARX1         saed90nm_max     n
+cr_reg_3_                 DFFARX1         saed90nm_max     n
+cr_reg_4_                 DFFARX1         saed90nm_max     n
+cr_reg_5_                 DFFARX1         saed90nm_max     n
+cr_reg_6_                 DFFARX1         saed90nm_max     n
+cr_reg_7_                 DFFARX1         saed90nm_max     n
+ctr_reg_0_                DFFARX1         saed90nm_max     n
+ctr_reg_1_                DFFARX1         saed90nm_max     n
+ctr_reg_2_                DFFARX1         saed90nm_max     n
+ctr_reg_3_                DFFARX1         saed90nm_max     n
+ctr_reg_4_                DFFARX1         saed90nm_max     n
+ctr_reg_5_                DFFARX1         saed90nm_max     n
+ctr_reg_6_                DFFARX1         saed90nm_max     n
+ctr_reg_7_                DFFARX1         saed90nm_max     n
+irq_flag_reg              DFFARX1         saed90nm_max     n
+prer_reg_0_               DFFASX1         saed90nm_max     n
+prer_reg_10_              DFFASX1         saed90nm_max     n
+prer_reg_11_              DFFASX1         saed90nm_max     n
+prer_reg_12_              DFFASX1         saed90nm_max     n
+prer_reg_13_              DFFASX1         saed90nm_max     n
+prer_reg_14_              DFFASX1         saed90nm_max     n
+prer_reg_15_              DFFASX1         saed90nm_max     n
+prer_reg_1_               DFFASX1         saed90nm_max     n
+prer_reg_2_               DFFASX1         saed90nm_max     n
+prer_reg_3_               DFFASX1         saed90nm_max     n
+prer_reg_4_               DFFASX1         saed90nm_max     n
+prer_reg_5_               DFFASX1         saed90nm_max     n
+prer_reg_6_               DFFASX1         saed90nm_max     n
+prer_reg_7_               DFFASX1         saed90nm_max     n
+prer_reg_8_               DFFASX1         saed90nm_max     n
+prer_reg_9_               DFFASX1         saed90nm_max     n
+rxack_reg                 DFFARX1         saed90nm_max     n
+tip_reg                   DFFARX1         saed90nm_max     n
+txr_reg_0_                DFFARX1         saed90nm_max     n
+txr_reg_1_                DFFARX1         saed90nm_max     n
+txr_reg_2_                DFFARX1         saed90nm_max     n
+txr_reg_3_                DFFARX1         saed90nm_max     n
+txr_reg_4_                DFFARX1         saed90nm_max     n
+txr_reg_5_                DFFARX1         saed90nm_max     n
+txr_reg_6_                DFFARX1         saed90nm_max     n
+txr_reg_7_                DFFARX1         saed90nm_max     n
+wb_ack_o_reg              DFFX1           saed90nm_max     n
+wb_dat_o_reg_0_           DFFX1           saed90nm_max     n
+wb_dat_o_reg_1_           DFFX1           saed90nm_max     n
+wb_dat_o_reg_2_           DFFX1           saed90nm_max     n
+wb_dat_o_reg_3_           DFFX1           saed90nm_max     n
+wb_dat_o_reg_4_           DFFX1           saed90nm_max     n
+wb_dat_o_reg_5_           DFFX1           saed90nm_max     n
+wb_dat_o_reg_6_           DFFX1           saed90nm_max     n
+wb_dat_o_reg_7_           DFFX1           saed90nm_max     n
+wb_inta_o_reg             DFFARX1         saed90nm_max     n
+--------------------------------------------------------------------------------
+Total 352 cells
+
+1
