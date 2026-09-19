@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="1" majorVersion="1" minorVersion="8" name="__private_meta_data_:DRC_report_by_check_pg_drc" designName="i2c_cts" info="" checker="check_pg_drc" checkerVersion="" created="1789835832" createdDate="09:20:2026:00:37:12:CST" modified="1789835836" modifiedDate="09:20:2026:00:37:16:CST" interactive="false" internal="false" metaData="true" numTypes="1" numInsts="2"/>

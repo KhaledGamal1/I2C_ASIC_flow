@@ -1,0 +1,199 @@
+#@ # 
+#@ # Running icc2_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
+#@ # Date:   Sun Sep 20 00:51:28 2026
+#@ # Run by: ICer@IC_EDA
+#@ 
+
+set design "i2c"
+set std_worst "saed90nm_max.db"
+set target_library $std_worst
+set corner "worst"
+set project_dir "/mnt/hgfs/Shared_files/${design}"
+set Lib_path    "/home/ICer/Downloads/Lib"
+set dlib_path   "${project_dir}/pnr/2_design_lib/library"
+set prev_stage      "cts"
+set current_stage   "routing"
+#######################################################################
+# --------------- Files Handling ------------- #
+#######################################################################
+# Files handling
+sh rm    -r ../results/reports
+sh rm    -r ../results/outputs
+sh mkdir -p ../results/reports
+sh mkdir -p ../results/outputs
+#######################################################################
+# --------------- dlib setup ------------- #
+#######################################################################
+open_block  ${dlib_path}/${design}.dlib:${design}_${prev_stage}.design
+# copying the (clean) block from the previous stage (dlib) to just preserve it and work on the new one which is the present stage (floorplan)
+#to make sure if any errors happened through the current stage, it will be easy to restore the previous stage
+copy_block -from_block ${design}.dlib:${design}_${prev_stage}.design -to_block ${design}_${current_stage}
+current_block ${design}_${current_stage}.design
+start_gui
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+link_block
+win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0-77}
+win_set_filter -expand_cell_types {soft_macro  }
+win_set_select_class -visible {cell port bound routing_blockage shaping_blockage pg_region pin_blockage block_shielding topology_node topology_edge core_area die_area edit_group shape via terminal fill_cell placement_blockage }
+win_set_filter -class cell -filter {cell_array hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -class placement_blockage -filter {wiring} -layer {0-77}
+win_set_select_class {cell port bound routing_blockage shaping_blockage pg_region pin_blockage topology_node topology_edge edit_group shape via placement_blockage }
+#######################################################################
+# --------------- Tool Setup ------------- #
+#######################################################################
+set_host_option -max_cores 12
+#######################################################################
+# --------------- Pre-Route ------------- #
+#######################################################################
+# check for any issues that might cause problems during routing
+check_routability
+check_design -checks pre_route_stage
+suppress_message -force CMD-013
+suppress_message -force CMD-013; report_design_mismatch -check_design >> /mnt/hgfs/Shared_files/i2c/pnr/7_routing/run/check_design2026Sep20005217.log
+suppress_message -force CMD-013; check_scan_chain >> /mnt/hgfs/Shared_files/i2c/pnr/7_routing/run/check_design2026Sep20005217.log
+suppress_message -force CMD-013; check_mv_design >> /mnt/hgfs/Shared_files/i2c/pnr/7_routing/run/check_design2026Sep20005217.log
+suppress_message -force CMD-013; design_extraction_check >> /mnt/hgfs/Shared_files/i2c/pnr/7_routing/run/check_design2026Sep20005217.log
+suppress_message -force CMD-013; check_timing >> /mnt/hgfs/Shared_files/i2c/pnr/7_routing/run/check_design2026Sep20005217.log
+suppress_message -force CMD-013; check_routability >> /mnt/hgfs/Shared_files/i2c/pnr/7_routing/run/check_design2026Sep20005217.log
+suppress_message -force CMD-013; check_hier_design -stage pre_route >> /mnt/hgfs/Shared_files/i2c/pnr/7_routing/run/check_design2026Sep20005217.log
+unsuppress_message CMD-013
+set_ignored_layers -max M9 -min M2
+#######################################################################
+# --------------- App Options ------------- #
+#######################################################################
+# --- Enable Timing Driven        # ===== Timing ===== #
+#set_app_options -name route.global.timing_driven       -value true
+#set_app_options -name route.track.timing_driven        -value true
+#set_app_options -name route.detail.timing_driven       -value true
+# --- Enable crosstalk-aware routing    # ===== Cross Talk ===== #
+#set_app_options -name route.global.crosstalk_driven    -value true
+#set_app_options -name route.track.crosstalk_driven     -value true
+# --- Timing Analysis
+#set_app_options -name time.si_enable_analysis          -value true
+#set_app_options -name time.all_clocks_propagated       -value true
+# --- Complex Design high advanced TEchnology >> DRCs = 0
+# --- Simple design low Technology
+# ===== DRC ===== #
+# --- Improve DRC convergence
+set_app_options -name route.detail.eco_max_number_of_iterations  -value 20
+#set_app_options -name route.detail.drc_convergence_effort_level  -value high
+# --- drc spacing by metal patching
+#set_app_options -name route.detail.enable_drc_from_fixed_shapes -value true
+# ===== CCD ===== #
+# --- Enable concurrent clock and data optimization helps setup timing closure
+#set_app_options -name route_opt.flow.enable_ccd                        -value true
+# --- fix clock transition and capacitance violations already on
+#set_app_options -name route_opt.flow.enable_ccd_clock_drc_fixing       -value auto
+#set_app_options -name refine_opt.hold.effort -value "high"
+#set_app_options -list {route_opt.flow.enable_cto {true}}
+#set_app_options -list {route_opt.flow.enable_targeted_ccd_wns_optimization {true}}
+#set_app_options -list {route_opt.flow.enable_ccd {true}}
+# ===== Naming ===== #
+# --- Disabling the advanced legalization engine
+set_app_options -name place.legalize.enable_advanced_legalizer   -value false
+# ===== Naming ===== #
+# --- Prefix-Routing
+set_app_options -name opt.common.user_instance_name_prefix              -value "ROUTE_"
+route_opt
+# --- Check number of Cells inserted through Route step
+sizeof_collection [get_cells "ROUTE_*"]
+# # Hierarchical (top level module + sub modules)
+connect_pg_net -net VDD [get_pins -hierarchical */VDD]
+connect_pg_net -net VSS [get_pins -hierarchical */VSS]
+#######################################################################
+# --------------- Important checks ------------- #
+#######################################################################
+# --- Physical DRC
+check_routes > ../results/reports/routes.rpt
+# --- Open or Short nets
+check_lvs -max_errors 0 > ../results/reports/lvs_errors.rpt
+# --- PG_DRC
+check_pg_drc > ../results/reports/pg_drc.rpt
+check_pg_connectivity > ../results/reports/pg_connectivity.rpt
+# ---
+check_legality > ../results/reports/legality.rpt
+#######################################################################
+# --------------- DECAP Cells ------------- #
+#######################################################################
+set dcap_fillers       [get_lib_cell */DCAP*]
+create_stdcell_fillers -lib_cells $dcap_fillers                        -utilization 30                                 -prefix "DECAP_"                                -post_eco
+connect_pg_net -net "VDD" [get_pins -hierarchical "*/VDD*"]
+connect_pg_net -net "VSS" [get_pins -hierarchical "*/VSS*"]
+connect_pg_net -automatic
+remove_stdcell_fillers_with_violation
+# --- Verify updates
+check_lvs -max_errors 0
+check_routes
+check_legality
+check_pg_drc
+#######################################################################
+# --------------- Filler Cells ------------- #
+#######################################################################
+set std_fillers [get_lib_cell */SHFILL*]
+set_attribute [get_lib_cells */SHFILL*] dont_touch false
+set_attribute [get_lib_cells */SHFILL*] dont_use false
+set std_fillers_128 "saed90nm_max/SHFILL128"
+set std_fillers_64  "saed90nm_max/SHFILL64"
+set std_fillers_3   "saed90nm_max/SHFILL3"
+set std_fillers_2   "saed90nm_max/SHFILL2"
+set std_fillers_1   "saed90nm_max/SHFILL1"
+# --- insert non-metal fillers
+create_stdcell_fillers -lib_cells $std_fillers_128                        -prefix "FILLER128_"                               -post_eco                                          -continue_on_error
+create_stdcell_fillers -lib_cells $std_fillers_64                        -prefix "FILLER64_"                              -post_eco                                        -continue_on_error
+create_stdcell_fillers -lib_cells $std_fillers_3                        -prefix "FILLER3_"                               -post_eco                                        -continue_on_error
+create_stdcell_fillers -lib_cells $std_fillers_2                        -utilization 100                                 -prefix "FILLER2_"                               -post_eco                                        -continue_on_error                               -rules no_1x
+create_stdcell_fillers -lib_cells $std_fillers_1                        -prefix "FILLER1_"                               -post_eco                                        -continue_on_error                               -rules no_1x
+connect_pg_net -net "VSS" [get_pins -hierarchical "*/VSS"]
+connect_pg_net -net "VDD" [get_pins -hierarchical "*/VDD*"]
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {cellDensityMap} -show {true}
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {cellMapUtilMap} -show {true}
+cm_density_map -reload -grid_width 5 -grid_height 5
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {80.670 103.900}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {80.635 103.900}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {115.215 21.915}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {78.515 33.915}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {149.325 35.795}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {149.325 35.795}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {149.165 35.815}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {147.780 36.180}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {147.795 36.200}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {147.800 36.150}
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {cellMapUtilMap} -show {false}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {11.940 135.780}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {11.940 135.780}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {13.575 135.555}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {16.415 134.830}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {16.725 134.050}
+route_eco
+remove_stdcell_fillers_with_violation
+#######################################################################
+# --------------- Important Checks and reports ------------- #
+#######################################################################
+check_pg_drc > ../results/reports/pg_drc.rpt
+check_pg_connectivity                   > ../results/reports/pg_connectivity.rpt
+check_pg_missing_vias                   > ../results/reports/missing_via.rpt
+check_routes -drc true > ../results/reports/physical_drc.rpt
+report_timing                           > ../results/reports/timing.rpt
+report_constraint -all_violators > ../results/reports/routing_violations.rpt
+report_qor -summary > ../results/reports/qor.rpt
+check_routes > ../results/reports/routes.rpt
+check_lvs -max_errors 0 > ../results/reports/lvs_errors.rpt
+check_legality > ../results/reports/legality.rpt
+#######################################################################
+# --------------- Save Block & outputs ------------- #
+#######################################################################
+write_parasitics -output ../results/outputs/${design}.spef
+write_def                ../results/outputs/${design}.def
+write_verilog -include {all}   ../results/outputs/${design}.v
+write_sdc -output ../results/outputs/${design}.sdc
+write_gds ../results/outputs/${design}.gds
+gui_zoom -window [gui_get_current_window -view] -full
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {88.090 77.075}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {88.045 77.085}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {88.045 77.075}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {98.265 76.620}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {96.495 73.415}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {96.515 73.435}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {91.925 73.670}
+gui_zoom -window [gui_get_current_window -view] -full

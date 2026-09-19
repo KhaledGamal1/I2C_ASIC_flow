@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="7" majorVersion="1" minorVersion="8" name="__private_meta_data_:i2c_cts_floatingPG.err" designName="i2c_cts" info="" checker="check_pg_connectivity" checkerVersion="" created="1789835832" createdDate="09:20:2026:00:37:12:CST" modified="1789835836" modifiedDate="09:20:2026:00:37:16:CST" interactive="false" internal="false" metaData="true" numTypes="7" numInsts="1"/>

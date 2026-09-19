@@ -1,0 +1,202 @@
+<Database>
+Name/mnt/hgfs/Shared_files/i2c/pnr/7_routing/run/check_design.ems
+Creation TimeSun Sep 20 00:52:17 2026
+Modified TimeSun Sep 20 00:52:18 2026
+Design Namei2c_routing
+Library Namei2c.dlib
+</Database>
+<RuleCount>
+CR-0352
+DFT-0111
+NEX-0481
+TCK-001155
+TCK-0023
+TCK-01221
+</RuleCount>
+<UserDefinedRules>
+</UserDefinedRules>
+<Messages>
+DFT-011reason10
+NEX-048portNameVDD10
+TCK-002cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39pinSpareCell_3_0/CLK1[ get_pin { SpareCell_3_0/CLK } ]6
+TCK-002cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39pinSpareCell_3_1/CLK1[ get_pin { SpareCell_3_1/CLK } ]6
+TCK-002cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39pinSpareCell_3_2/CLK1[ get_pin { SpareCell_3_2/CLK } ]6
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_rst_i1[ get_port { wb_rst_i } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39porttest_mode1[ get_port { test_mode } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portdft_clk_i1[ get_port { dft_clk_i } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portdft_rst_i1[ get_port { dft_rst_i } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portarst_i1[ get_port { arst_i } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_adr_i[2]1[ get_port { wb_adr_i[2] } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_adr_i[1]1[ get_port { wb_adr_i[1] } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_adr_i[0]1[ get_port { wb_adr_i[0] } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_dat_i[7]1[ get_port { wb_dat_i[7] } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_dat_i[6]1[ get_port { wb_dat_i[6] } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_dat_i[5]1[ get_port { wb_dat_i[5] } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_dat_i[4]1[ get_port { wb_dat_i[4] } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_dat_i[3]1[ get_port { wb_dat_i[3] } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_dat_i[2]1[ get_port { wb_dat_i[2] } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_dat_i[1]1[ get_port { wb_dat_i[1] } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_dat_i[0]1[ get_port { wb_dat_i[0] } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_we_i1[ get_port { wb_we_i } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_stb_i1[ get_port { wb_stb_i } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portwb_cyc_i1[ get_port { wb_cyc_i } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portscl_pad_i1[ get_port { scl_pad_i } ]7
+TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39portsda_pad_i1[ get_port { sda_pad_i } ]7
+TCK-001cornerdefault1[ get_corners { default } ]40endpointctr_reg_7_/RSTB1[ get_pin { ctr_reg_7_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointctr_reg_6_/RSTB1[ get_pin { ctr_reg_6_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointctr_reg_5_/RSTB1[ get_pin { ctr_reg_5_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointctr_reg_4_/RSTB1[ get_pin { ctr_reg_4_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointctr_reg_3_/RSTB1[ get_pin { ctr_reg_3_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointctr_reg_2_/RSTB1[ get_pin { ctr_reg_2_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointctr_reg_1_/RSTB1[ get_pin { ctr_reg_1_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointctr_reg_0_/RSTB1[ get_pin { ctr_reg_0_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointtxr_reg_7_/RSTB1[ get_pin { txr_reg_7_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointtxr_reg_6_/RSTB1[ get_pin { txr_reg_6_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointtxr_reg_5_/RSTB1[ get_pin { txr_reg_5_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointtxr_reg_4_/RSTB1[ get_pin { txr_reg_4_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointtxr_reg_3_/RSTB1[ get_pin { txr_reg_3_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointtxr_reg_2_/RSTB1[ get_pin { txr_reg_2_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointtxr_reg_1_/RSTB1[ get_pin { txr_reg_1_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointtxr_reg_0_/RSTB1[ get_pin { txr_reg_0_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_15_/SETB1[ get_pin { prer_reg_15_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_14_/SETB1[ get_pin { prer_reg_14_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_13_/SETB1[ get_pin { prer_reg_13_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_12_/SETB1[ get_pin { prer_reg_12_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_11_/SETB1[ get_pin { prer_reg_11_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_10_/SETB1[ get_pin { prer_reg_10_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_9_/SETB1[ get_pin { prer_reg_9_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_8_/SETB1[ get_pin { prer_reg_8_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_7_/SETB1[ get_pin { prer_reg_7_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_6_/SETB1[ get_pin { prer_reg_6_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_5_/SETB1[ get_pin { prer_reg_5_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_4_/SETB1[ get_pin { prer_reg_4_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_3_/SETB1[ get_pin { prer_reg_3_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_2_/SETB1[ get_pin { prer_reg_2_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_1_/SETB1[ get_pin { prer_reg_1_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointprer_reg_0_/SETB1[ get_pin { prer_reg_0_/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointcr_reg_3_/RSTB1[ get_pin { cr_reg_3_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointcr_reg_7_/RSTB1[ get_pin { cr_reg_7_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointcr_reg_6_/RSTB1[ get_pin { cr_reg_6_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointcr_reg_5_/RSTB1[ get_pin { cr_reg_5_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointcr_reg_4_/RSTB1[ get_pin { cr_reg_4_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointcr_reg_2_/RSTB1[ get_pin { cr_reg_2_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointcr_reg_1_/RSTB1[ get_pin { cr_reg_1_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointcr_reg_0_/RSTB1[ get_pin { cr_reg_0_/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointal_reg/RSTB1[ get_pin { al_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointrxack_reg/RSTB1[ get_pin { rxack_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointtip_reg/RSTB1[ get_pin { tip_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointirq_flag_reg/RSTB1[ get_pin { irq_flag_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointwb_inta_o_reg/RSTB1[ get_pin { wb_inta_o_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/ld_reg/RSTB1[ get_pin { byte_controller/ld_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/dcnt_reg[0]/RSTB1[ get_pin { byte_controller/dcnt_reg[0]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/dcnt_reg[1]/RSTB1[ get_pin { byte_controller/dcnt_reg[1]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/dcnt_reg[2]/RSTB1[ get_pin { byte_controller/dcnt_reg[2]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/sr_reg[1]/RSTB1[ get_pin { byte_controller/sr_reg[1]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/sr_reg[2]/RSTB1[ get_pin { byte_controller/sr_reg[2]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/sr_reg[3]/RSTB1[ get_pin { byte_controller/sr_reg[3]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/sr_reg[4]/RSTB1[ get_pin { byte_controller/sr_reg[4]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/sr_reg[5]/RSTB1[ get_pin { byte_controller/sr_reg[5]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/sr_reg[6]/RSTB1[ get_pin { byte_controller/sr_reg[6]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/sr_reg[7]/RSTB1[ get_pin { byte_controller/sr_reg[7]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/core_txd_reg/RSTB1[ get_pin { byte_controller/core_txd_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/sr_reg[0]/RSTB1[ get_pin { byte_controller/sr_reg[0]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/c_state_reg[4]/RSTB1[ get_pin { byte_controller/c_state_reg[4]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/core_cmd_reg[0]/RSTB1[ get_pin { byte_controller/core_cmd_reg[0]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/c_state_reg[0]/RSTB1[ get_pin { byte_controller/c_state_reg[0]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/c_state_reg[2]/RSTB1[ get_pin { byte_controller/c_state_reg[2]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/c_state_reg[1]/RSTB1[ get_pin { byte_controller/c_state_reg[1]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/core_cmd_reg[3]/RSTB1[ get_pin { byte_controller/core_cmd_reg[3]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/core_cmd_reg[2]/RSTB1[ get_pin { byte_controller/core_cmd_reg[2]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/c_state_reg[3]/RSTB1[ get_pin { byte_controller/c_state_reg[3]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/ack_out_reg/RSTB1[ get_pin { byte_controller/ack_out_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/cmd_ack_reg/RSTB1[ get_pin { byte_controller/cmd_ack_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/shift_reg/RSTB1[ get_pin { byte_controller/shift_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/core_cmd_reg[1]/RSTB1[ get_pin { byte_controller/core_cmd_reg[1]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cSDA_reg[0]/D1[ get_pin { byte_controller/bit_controller/cSDA_reg[0]/D } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cSDA_reg[0]/RSTB1[ get_pin { byte_controller/bit_controller/cSDA_reg[0]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cSDA_reg[1]/RSTB1[ get_pin { byte_controller/bit_controller/cSDA_reg[1]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cSCL_reg[0]/D1[ get_pin { byte_controller/bit_controller/cSCL_reg[0]/D } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cSCL_reg[0]/RSTB1[ get_pin { byte_controller/bit_controller/cSCL_reg[0]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cSCL_reg[1]/RSTB1[ get_pin { byte_controller/bit_controller/cSCL_reg[1]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[0]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[0]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[7]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[7]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[1]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[1]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[2]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[2]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[3]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[3]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[4]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[4]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[5]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[5]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[6]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[6]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[8]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[8]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[9]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[9]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[10]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[10]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[11]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[11]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[12]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[12]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/filter_cnt_reg[13]/RSTB1[ get_pin { byte_controller/bit_controller/filter_cnt_reg[13]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/fSCL_reg[0]/SETB1[ get_pin { byte_controller/bit_controller/fSCL_reg[0]/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/fSCL_reg[1]/SETB1[ get_pin { byte_controller/bit_controller/fSCL_reg[1]/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/fSCL_reg[2]/SETB1[ get_pin { byte_controller/bit_controller/fSCL_reg[2]/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/fSDA_reg[0]/SETB1[ get_pin { byte_controller/bit_controller/fSDA_reg[0]/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/fSDA_reg[1]/SETB1[ get_pin { byte_controller/bit_controller/fSDA_reg[1]/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/fSDA_reg[2]/SETB1[ get_pin { byte_controller/bit_controller/fSDA_reg[2]/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/sSCL_reg/SETB1[ get_pin { byte_controller/bit_controller/sSCL_reg/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/dSCL_reg/SETB1[ get_pin { byte_controller/bit_controller/dSCL_reg/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/sSDA_reg/SETB1[ get_pin { byte_controller/bit_controller/sSDA_reg/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/dSDA_reg/SETB1[ get_pin { byte_controller/bit_controller/dSDA_reg/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/sta_condition_reg/RSTB1[ get_pin { byte_controller/bit_controller/sta_condition_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/sto_condition_reg/RSTB1[ get_pin { byte_controller/bit_controller/sto_condition_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/busy_reg/RSTB1[ get_pin { byte_controller/bit_controller/busy_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[0]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[0]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/sda_oen_reg/SETB1[ get_pin { byte_controller/bit_controller/sda_oen_reg/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/al_reg/RSTB1[ get_pin { byte_controller/bit_controller/al_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[1]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[1]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[2]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[2]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[3]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[3]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[4]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[4]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[13]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[13]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[14]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[14]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[15]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[15]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/sda_chk_reg/RSTB1[ get_pin { byte_controller/bit_controller/sda_chk_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[16]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[16]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[5]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[5]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[6]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[6]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[7]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[7]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[8]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[8]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[9]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[9]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[10]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[10]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[11]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[11]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/c_state_reg[12]/RSTB1[ get_pin { byte_controller/bit_controller/c_state_reg[12]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/scl_oen_reg/SETB1[ get_pin { byte_controller/bit_controller/scl_oen_reg/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/slave_wait_reg/RSTB1[ get_pin { byte_controller/bit_controller/slave_wait_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[0]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[0]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/clk_en_reg/SETB1[ get_pin { byte_controller/bit_controller/clk_en_reg/SETB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cmd_ack_reg/RSTB1[ get_pin { byte_controller/bit_controller/cmd_ack_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cmd_stop_reg/RSTB1[ get_pin { byte_controller/bit_controller/cmd_stop_reg/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[15]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[15]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[1]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[1]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[2]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[2]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[3]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[3]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[4]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[4]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[5]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[5]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[6]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[6]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[7]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[7]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[8]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[8]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[9]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[9]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[10]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[10]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[11]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[11]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[12]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[12]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[13]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[13]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointbyte_controller/bit_controller/cnt_reg[14]/RSTB1[ get_pin { byte_controller/bit_controller/cnt_reg[14]/RSTB } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_0/D1[ get_pin { SpareCell_3_0/D } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_0/SI1[ get_pin { SpareCell_3_0/SI } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_0/SE1[ get_pin { SpareCell_3_0/SE } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_1/D1[ get_pin { SpareCell_3_1/D } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_1/SI1[ get_pin { SpareCell_3_1/SI } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_1/SE1[ get_pin { SpareCell_3_1/SE } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_2/D1[ get_pin { SpareCell_3_2/D } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_2/SI1[ get_pin { SpareCell_3_2/SI } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_2/SE1[ get_pin { SpareCell_3_2/SE } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointscl_pad_o1[ get_port { scl_pad_o } ]7modedefault1[ get_modes { default } ]39reasoncase constant10
+TCK-001cornerdefault1[ get_corners { default } ]40endpointsda_pad_o1[ get_port { sda_pad_o } ]7modedefault1[ get_modes { default } ]39reasoncase constant10
+CR-035instance10layerslayer M310masteri2c_routing10netscl_pad_o10portscl_pad_o10
+CR-035instance10layerslayer M310masteri2c_routing10netsda_pad_o10portsda_pad_o10
+</Messages>

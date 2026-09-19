@@ -1,0 +1,6 @@
+../results/outputs/i2c.spef.tlup_max_125.spef for scenarios: 
+	 scenario: default, corner type: late
+
+../results/outputs/i2c.spef.tlup_min_125.spef for scenarios: 
+	 scenario: default, corner type: early
+

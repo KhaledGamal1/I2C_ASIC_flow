@@ -1,0 +1,162 @@
+
+************************
+
+running check_legality
+
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+	place.legalize.enable_prerouted_net_check: 1
+
+Expand check halo by 0.3200 x 0.3200
+Scanning PG objects...
+PG hash cached 2 nets; 26 viaBoxes; 0 viaMatrices.
+PG scanned 218 objects; 3030 vias; 0 staples.
+PG scan complete.  Hash key = 30cd6d82ac2559c
+Updating PG structure for 'i2c.dlib:i2c_routing.design'
+Loading layers using 12 cores.
+Loading layer M2:
+Loading layer M3:
+Loading layer M4:
+Layer M2:  0 straps, 1251 other, 0 preroute
+Layer M2:  12 secDefs  1251 sectors (0 empty)
+Layer M2:    2.000 ave hvObjs/secDef max 2 at {{79.5700 139.6800} {82.4300 139.7200}}
+Layer M4:  0 straps, 1251 other, 0 preroute
+Layer M4:  12 secDefs  1251 sectors (0 empty)
+Layer M4:    2.000 ave hvObjs/secDef max 2 at {{79.5700 139.6800} {82.4300 139.7200}}
+Layer M3:  0 straps, 1251 other, 0 preroute
+Layer M3:  12 secDefs  1251 sectors (0 empty)
+Layer M3:    2.000 ave hvObjs/secDef max 2 at {{79.5700 139.6800} {82.4300 139.7200}}
+Loading layer M5:
+Loading layer M6:
+Layer M5:  0 straps, 1335 other, 0 preroute
+Layer M5:  17 secDefs  1335 sectors (0 empty)
+Layer M5:    2.059 ave hvObjs/secDef max 3 at {{99.5300 139.5200} {102.4700 139.6800}}
+Loading layer M1:
+Layer M1:  0 straps, 0 other, 0 preroute
+Layer M1:  0 secDefs  0 sectors (0 empty)
+Layer M6:  258 straps, 837 other, 0 preroute
+Layer M6:  28 secDefs  1095 sectors (0 empty)
+Layer M6:    2.107 ave hvObjs/secDef max 5 at {{39.7350 139.4500} {42.2650 139.7500}}
+Loading layer M7:
+Loading layer M8:
+Layer M7:  76 straps, 801 other, 0 preroute
+Layer M7:  69 secDefs  877 sectors (0 empty)
+Layer M7:    2.130 ave hvObjs/secDef max 6 at {{70.2800 125.3200} {71.7200 136.6000}}
+Layer M8:  61 straps, 70 other, 0 preroute
+Layer M8:  59 secDefs  131 sectors (0 empty)
+Layer M8:   13.034 ave hvObjs/secDef max 36 at {{19.5000 99.6900} {132.5000 102.3100}}
+Loading layer M9:
+Layer M9:  26 straps, 28 other, 0 preroute
+Layer M9:  19 secDefs  54 sectors (0 empty)
+Layer M9:   10.263 ave hvObjs/secDef max 20 at {{7.1200 19.5000} {8.7300 142.4800}}
+
+Sector Array Stats:
+Num Sectors:  7245
+Num SecDefs:   228
+Shared: 166 count; 43.3 ave; 130 max
+SecDef Shapes: 150 Below-aligned, 0 Above-aligned, 32 Horizontal, 46 Vertical
+Referenced Patterns: 8 count; 8.8 ave; 30 max
+
+Outdated cache file, starting new Place cache for 'i2c.dlib:i2c_routing.design'
+Outdated cache file, starting new Access cache for 'i2c.dlib:i2c_routing.design'
+Connection checks for layer M2: blocked_pin pin_access_default track_drc pin_extend0
+Connection checks for layer M3: blocked_pin pin_access_default track_drc pin_extend1
+Connection checks for layer M4: blocked_pin pin_access_default track_drc pin_extend1
+Connection checks for layer M5: blocked_pin pin_access_default track_drc pin_extend1
+
+check_legality for block design i2c_master_top ... 
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+Design has no advanced rules
+Checking legality
+Checking cell legality:
+0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+Sorting rows.
+Checking spacing rule legality.
+0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+Checking packing rule legality.
+
+
+****************************************
+  Report : Legality
+****************************************
+
+VIOLATIONS BY CATEGORY:
+   MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+         0          0          0  Two objects overlap.
+         0          0          0  A cell violates a pnet.
+         0          0          0  A cell is illegal at a site.
+         0          0          0  A cell is not aligned with a site.
+         0          0          0  A cell has an illegal orientation.
+         0          0          0  A cell spacing rule is violated.
+         0          0          0  A layer rule is violated.
+         0          0          0  A cell is in the wrong region.
+         0          0          0  Two cells violate cts margins.
+         0          0          0  Two cells violate coloring.
+
+         0          0          0  TOTAL
+
+TOTAL 0 Violations.
+
+VIOLATIONS BY SUBCATEGORY:
+     MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+
+         0          0          0    Two objects overlap.
+           0          0          0    Two cells overlap.
+           0          0          0    Two cells have overlapping keepout margins.
+           0          0          0    A cell overlaps a blockage.
+           0          0          0    A cell keepout margin overlaps a blockage.
+
+         0          0          0    A cell violates a pnet.
+
+         0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates pin-track alignment rules.
+           0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates legal index rule.
+           0          0          0    A cell has the wrong variant for its location.
+
+         0          0          0    A cell is not aligned with a site.
+           0          0          0    A cell is not aligned with the base site.
+           0          0          0    A cell is not aligned with an overlaid site.
+
+         0          0          0    A cell has an illegal orientation.
+
+         0          0          0    A cell spacing rule is violated.
+           0          0          0    A spacing rule is violated in a row.
+           0          0          0    A spacing rule is violated between adjacent rows.
+           0          0          0    A cell violates vertical abutment rule.
+           0          0          0    A cell violates metal spacing rule.
+
+         0          0          0    A layer rule is violated.
+           0          0          0    A layer VTH rule is violated.
+           0          0          0    A layer OD rule is violated.
+           0          0          0    A layer OD max-width rule is violated.
+           0          0          0    A layer ALL_OD corner rule is violated.
+           0          0          0    A layer max-vertical-length rule is violated.
+           0          0          0    A layer TPO rule is violated.
+           0          0          0    Filler cell insertion cannot satisfy layer rules.
+
+         0          0          0    A cell is in the wrong region.
+           0          0          0    A cell is outside its hard bound.
+           0          0          0    A cell is in the wrong voltage area.
+           0          0          0    A cell violates an exclusive movebound.
+
+         0          0          0    Two cells violate cts margins.
+
+         0          0          0    Two cells violate coloring.
+
+
+check_legality for block design i2c_master_top succeeded!
+
+
+check_legality succeeded.
+
+**************************
+
+NPLDRC Place Cache: unique cache elements 1024
+NPLDRC Place Cache: hit rate  41.3%  (1024 / 1743)
+NPLDRC Access Cache: unique cache elements 1092
+NPLDRC Access Cache: hit rate  40.5%  (1092 / 1835)
+NPLDRC Pin Status Cache: no calls
+NPLDRC Multi Cell Cache: no calls
+NPLDRC ViaLadder Cache: no calls
+1

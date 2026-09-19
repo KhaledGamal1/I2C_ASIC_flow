@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<errorData typeCount="1" majorVersion="1" minorVersion="8" name="__private_meta_data_:i2c_powerplan_missingVia.err" designName="i2c_powerplan" info="" checker="check_pg_missing_vias" checkerVersion="" created="1787661018" createdDate="08:25:2026:20:30:18:CST" modified="1787661018" modifiedDate="08:25:2026:20:30:18:CST" interactive="false" internal="false" metaData="true" numTypes="1" numInsts="0"/>
